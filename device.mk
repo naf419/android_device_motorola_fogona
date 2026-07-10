@@ -1,7 +1,8 @@
 LOCAL_PATH := device/motorola/fogona
 
 # A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+BOARD_USES_FULL_RECOVERY_IMAGE := true
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
