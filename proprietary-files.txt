@@ -96,7 +96,7 @@
 #vendor/lib/libaualgo_azp_wrapper.so
 #vendor/lib/libaualgo_foundation.so
 #vendor/lib/libaudio_log_utils.so
-#vendor/lib/libdiag.so
+vendor/lib/libdiag.so
 #vendor/lib/libjson.so
 #vendor/lib/liblx-ar_util.so
 #vendor/lib/liblx-osal.so
@@ -136,7 +136,7 @@
 #vendor/lib64/libaualgo_azp_wrapper.so
 #vendor/lib64/libaualgo_foundation.so
 #vendor/lib64/libaudio_log_utils.so
-#vendor/lib64/libdiag.so
+vendor/lib64/libdiag.so
 #vendor/lib64/libjson.so
 #vendor/lib64/liblx-ar_util.so
 #vendor/lib64/liblx-osal.so
@@ -393,8 +393,8 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/libcamxtintlessalgo.so
 #vendor/lib/libchilog.so
 #vendor/lib/libcom.qti.chinodeutils.so
-#vendor/lib/libdisplayconfig.qti.so
-#vendor/lib/libgralloc.qti.so
+vendor/lib/libdisplayconfig.qti.so
+vendor/lib/libgralloc.qti.so
 #vendor/lib/libhdr_impl.so
 #vendor/lib/libmmcamera_cac3.so
 #vendor/lib/libmmcamera_lscv35.so
@@ -522,8 +522,8 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libcamxtintlessalgo.so
 #vendor/lib64/libchilog.so
 #vendor/lib64/libcom.qti.chinodeutils.so
-#vendor/lib64/libdisplayconfig.qti.so
-#vendor/lib64/libgralloc.qti.so
+vendor/lib64/libdisplayconfig.qti.so
+vendor/lib64/libgralloc.qti.so
 #vendor/lib64/libhdr_impl.so
 #vendor/lib64/libmmcamera_cac3.so
 #vendor/lib64/libmmcamera_lscv35.so
@@ -867,10 +867,10 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
 #vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
 #vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
-#vendor/lib/egl/eglSubDriverAndroid.so
-#vendor/lib/egl/libEGL_adreno.so
-#vendor/lib/egl/libGLESv1_CM_adreno.so
-#vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
 #vendor/lib/egl/libVkLayer_ADRENO_qprofiler.so
 #vendor/lib/egl/libq3dtools_adreno.so
 #vendor/lib/egl/libq3dtools_esx.so
@@ -881,25 +881,25 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/com.motorola.hardware.display.panel@1.0.so
 #vendor/lib/com.motorola.hardware.display.panel@1.1.so
 #vendor/lib/libEGL_adreno.so
-#vendor/lib/libadreno_utils.so
-#vendor/lib/libdisplaydebug.so
-#vendor/lib/libdisplayqos.so
-#vendor/lib/libdisplayskuutils.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libdisplaydebug.so
+vendor/lib/libdisplayqos.so
+vendor/lib/libdisplayskuutils.so
 #vendor/lib/libdrmutils.so
 #vendor/lib/libgpu_tonemapper.so
 #vendor/lib/libgralloccore.so
 #vendor/lib/libgrallocutils.so
-#vendor/lib/libgsl.so
-#vendor/lib/libllvm-glnext.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-glnext.so
 #vendor/lib/libqdutils.so
 #vendor/lib/libqservice.so
 #vendor/lib/libsdedrm.so
-#vendor/lib/libsdm-color.so
+vendor/lib/libsdm-color.so
 #vendor/lib/libsdm-disp-vndapis.so
 #vendor/lib/libsdmcore.so
-#vendor/lib/libsdmextension.so
-#vendor/lib/libsdmutils.so
-#vendor/lib/libtinyxml2_1.so
+vendor/lib/libsdmextension.so
+vendor/lib/libsdmutils.so
+vendor/lib/libtinyxml2_1.so
 #vendor/lib/vendor.display.color@1.0.so
 #vendor/lib/vendor.display.color@1.1.so
 #vendor/lib/vendor.display.color@1.2.so
@@ -939,10 +939,10 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/vendor.qti.hardware.display.mapperextensions@1.0.so
 #vendor/lib/vendor.qti.hardware.display.mapperextensions@1.1.so
 #vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
-#vendor/lib64/egl/eglSubDriverAndroid.so
-#vendor/lib64/egl/libEGL_adreno.so
-#vendor/lib64/egl/libGLESv1_CM_adreno.so
-#vendor/lib64/egl/libGLESv2_adreno.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so
 #vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
 #vendor/lib64/egl/libq3dtools_adreno.so
 #vendor/lib64/egl/libq3dtools_esx.so
@@ -956,26 +956,26 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/com.motorola.hardware.display.touch@1.1.so
 #vendor/lib64/com.motorola.hardware.display.touch@1.2.so
 #vendor/lib64/libEGL_adreno.so
-#vendor/lib64/libadreno_utils.so
-#vendor/lib64/libdisplaydebug.so
-#vendor/lib64/libdisplayqos.so
-#vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libdisplaydebug.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdisplayskuutils.so
 #vendor/lib64/libdrmutils.so
 #vendor/lib64/libgpu_tonemapper.so
 #vendor/lib64/libgralloccore.so
 #vendor/lib64/libgrallocutils.so
-#vendor/lib64/libgsl.so
+vendor/lib64/libgsl.so
 #vendor/lib64/libhistogram.so
-#vendor/lib64/libllvm-glnext.so
+vendor/lib64/libllvm-glnext.so
 #vendor/lib64/libqdutils.so
 #vendor/lib64/libqservice.so
 #vendor/lib64/libsdedrm.so
-#vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-color.so
 #vendor/lib64/libsdm-disp-vndapis.so
 #vendor/lib64/libsdmcore.so
-#vendor/lib64/libsdmextension.so
-#vendor/lib64/libsdmutils.so
-#vendor/lib64/libtinyxml2_1.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libsdmutils.so
+vendor/lib64/libtinyxml2_1.so
 #vendor/lib64/vendor.display.color@1.0.so
 #vendor/lib64/vendor.display.color@1.1.so
 #vendor/lib64/vendor.display.color@1.2.so
@@ -1132,8 +1132,8 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/libminkdescriptor.so
 #vendor/lib/libminksocket_vendor.so
 #vendor/lib/liboemcrypto.so
-#vendor/lib/libqcbor.so
-#vendor/lib/libqrtr.so
+vendor/lib/libqcbor.so
+vendor/lib/libqrtr.so
 #vendor/lib/libtrustedapploader.so
 #vendor/lib64/mediacas/libclearkeycasplugin.so
 #vendor/lib64/mediadrm/libdrmclearkeyplugin.so
@@ -1141,8 +1141,8 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libminkdescriptor.so
 #vendor/lib64/libminksocket_vendor.so
 #vendor/lib64/liboemcrypto.so
-#vendor/lib64/libqcbor.so
-#vendor/lib64/libqrtr.so
+vendor/lib64/libqcbor.so
+vendor/lib64/libqrtr.so
 #vendor/lib64/libtrustedapploader.so
 #vendor/lib64/libwvaidl.so
 
@@ -1151,18 +1151,18 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #system_ext/lib/vendor.qti.hardware.qseecom@1.0.so
 #system_ext/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 #system_ext/lib64/vendor.qti.hardware.qseecom@1.0.so
-#vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
-#vendor/bin/qseecomd
-#vendor/etc/init/qseecomd.rc
-#vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
-#vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
-#vendor/lib/libQSEEComAPI.so
-#vendor/lib/libdrmfs.so
-#vendor/lib/vendor.qti.hardware.qseecom@1.0.so
-#vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
-#vendor/lib64/libQSEEComAPI.so
-#vendor/lib64/libdrmfs.so
-#vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
+vendor/bin/qseecomd
+vendor/etc/init/qseecomd.rc
+vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
+vendor/lib/libQSEEComAPI.so
+vendor/lib/libdrmfs.so
+vendor/lib/vendor.qti.hardware.qseecom@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
+vendor/lib64/libQSEEComAPI.so
+vendor/lib64/libdrmfs.so
+vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # DRM (Qualcomm Trusted Execution Environment)
 #system_ext/lib/vendor.qti.hardware.qteeconnector-V1-ndk.so
@@ -1174,13 +1174,13 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 #vendor/lib/libGPQTEEC_vendor.so
 #vendor/lib/libGPTEE_vendor.so
-#vendor/lib/libGPreqcancel_svc.so
+vendor/lib/libGPreqcancel_svc.so
 #vendor/lib/libQTEEConnector_vendor.so
 #vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so
 #vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 #vendor/lib64/libGPQTEEC_vendor.so
 #vendor/lib64/libGPTEE_vendor.so
-#vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libGPreqcancel_svc.so
 #vendor/lib64/libQTEEConnector_vendor.so
 #vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
@@ -1212,9 +1212,11 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper
-#vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 #vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
-#vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 #vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
 #vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
 #vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
@@ -1338,13 +1340,13 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/firmware/ipa_fws.mdt
 
 # Keymaster
-#vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-#vendor/lib/libkeymasterdeviceutils.so
-#vendor/lib/libkeymasterutils.so
-#vendor/lib/libqtikeymaster4.so
-#vendor/lib64/libkeymasterdeviceutils.so
-#vendor/lib64/libkeymasterutils.so
-#vendor/lib64/libqtikeymaster4.so
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+vendor/lib/libkeymasterdeviceutils.so
+vendor/lib/libkeymasterutils.so
+vendor/lib/libqtikeymaster4.so
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so
 
 # Local time
 #vendor/lib/hw/local_time.default.so
@@ -1382,7 +1384,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/libqc2audio_utils.so
 #vendor/lib/libstagefright_bufferpool@2.0.1.so
 #vendor/lib/libstagefright_softomx_plugin.so
-#vendor/lib/libstagefrighthw.so
+vendor/lib/libstagefrighthw.so
 #vendor/lib/vendor.qti.hardware.vpp@1.1.so
 #vendor/lib/vendor.qti.hardware.vpp@1.2.so
 #vendor/lib64/libOmxCore.so
@@ -1394,7 +1396,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libqc2audio_platform.so
 #vendor/lib64/libqc2audio_utils.so
 #vendor/lib64/libstagefright_bufferpool@2.0.1.so
-#vendor/lib64/libstagefrighthw.so
+vendor/lib64/libstagefrighthw.so
 #vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 #vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
@@ -2265,8 +2267,8 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/app/TimeService/TimeService.apk
 #vendor/bin/time_daemon
 #vendor/etc/init/init.time_daemon.rc
-#vendor/lib/libtime_genoff.so
-#vendor/lib64/libtime_genoff.so
+vendor/lib/libtime_genoff.so
+vendor/lib64/libtime_genoff.so
 
 # Trusted UI
 #vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
@@ -2282,7 +2284,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/vendor.qti.hardware.trustedui@1.0.so
 #vendor/lib/vendor.qti.hardware.trustedui@1.1.so
 #vendor/lib/vendor.qti.hardware.trustedui@1.2.so
-#vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 #vendor/lib64/libTouchInputVM.so
 #vendor/lib64/libTrustedInput.so
 #vendor/lib64/libTrustedInputTZ.so
@@ -2293,7 +2295,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 #vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 #vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
-#vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # USB
 #vendor/bin/hw/android.hardware.usb@1.2-service-qti
@@ -2868,10 +2870,10 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/libFlacSwDec.so
 #vendor/lib/libGLESv2_adreno.so
 #vendor/lib/libGPMTEEC_vendor.so
-#vendor/lib/libGPreqcancel.so
+vendor/lib/libGPreqcancel.so
 #vendor/lib/libQcelp13SwCodec.so
 #vendor/lib/libSecureUILib.so
-#vendor/lib/libStDrvInt.so
+vendor/lib/libStDrvInt.so
 #vendor/lib/libTxPwrJni.so
 #vendor/lib/lib_bt_aptx.so
 #vendor/lib/lib_bt_ble.so
@@ -2905,7 +2907,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/libdiagjni.so
 #vendor/lib/libdisp-aba.so
 #vendor/lib/libdpps.so
-#vendor/lib/libdrmtime.so
+vendor/lib/libdrmtime.so
 #vendor/lib/libdsd2pcm.so
 #vendor/lib/libeai_fixed_32.so
 #vendor/lib/libengineplugin.so
@@ -2916,12 +2918,12 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/libgeofencing.so
 #vendor/lib/libgnss.so
 #vendor/lib/libgnsspps.so
-#vendor/lib/libgpt.so
+vendor/lib/libgpt.so
 #vendor/lib/libgpudataproducer.so
 #vendor/lib/libhdcp1prov.so
 #vendor/lib/libhdcp2p2prov.so
 #vendor/lib/libhdcpsrm.so
-#vendor/lib/libhdr_tm.so
+vendor/lib/libhdr_tm.so
 #vendor/lib/libhfp_pal.so
 #vendor/lib/libipebpsstriping.so
 #vendor/lib/libiqi_bridge.so
@@ -2958,7 +2960,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/liboem_specific.so
 #vendor/lib/liboemaids_vendor.so
 #vendor/lib/libopestriping.so
-#vendor/lib/libops.so
+vendor/lib/libops.so
 #vendor/lib/libos.so
 #vendor/lib/libpalclient.so
 #vendor/lib/libperfioctl.so
@@ -2986,11 +2988,11 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/libqcrildataqos.so
 #vendor/lib/libqdp.so
 #vendor/lib/libqdpr.so
-#vendor/lib/libqisl.so
+vendor/lib/libqisl.so
 #vendor/lib/libqmi_csvt_srvc.so
 #vendor/lib/libqmi_legacy.so
 #vendor/lib/libqmiextservices.so
-#vendor/lib/libqseed3.so
+vendor/lib/libqseed3.so
 #vendor/lib/libqti-iopd.so
 #vendor/lib/libqti-perfd.so
 #vendor/lib/libqti-qesdk-secure.so
@@ -3001,11 +3003,11 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/librecovery_updater_msm.so
 #vendor/lib/libril-qc-ltedirectdisc.so
 #vendor/lib/libril-qc-radioconfig.so
-#vendor/lib/librpmb.so
+vendor/lib/librpmb.so
 #vendor/lib/libsdm-colormgr-algo.so
 #vendor/lib/libsdsprpc.so
-#vendor/lib/libsecureui.so
-#vendor/lib/libsecureui_svcsock.so
+vendor/lib/libsecureui.so
+vendor/lib/libsecureui_svcsock.so
 #vendor/lib/libskewknob.so
 #vendor/lib/libsmemlog.so
 #vendor/lib/libsndcardparser.so
@@ -3013,9 +3015,9 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib/libsns_registry_skel.so
 #vendor/lib/libsoc_helper_jni.so
 #vendor/lib/libspcom.so
-#vendor/lib/libspl.so
+vendor/lib/libspl.so
 #vendor/lib/libssc_default_listener.so
-#vendor/lib/libssd.so
+vendor/lib/libssd.so
 #vendor/lib/libstreamparser.so
 #vendor/lib/libsubsystem_control.so
 #vendor/lib/libswregistrationalgo.so
@@ -3053,10 +3055,10 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libFlacSwDec.so
 #vendor/lib64/libGLESv2_adreno.so
 #vendor/lib64/libGPMTEEC_vendor.so
-#vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel.so
 #vendor/lib64/libQcelp13SwCodec.so
 #vendor/lib64/libSecureUILib.so
-#vendor/lib64/libStDrvInt.so
+vendor/lib64/libStDrvInt.so
 #vendor/lib64/libTxPwrJni.so
 #vendor/lib64/lib_android_keymaster_keymint_utils.so
 #vendor/lib64/lib_bt_aptx.so
@@ -3105,7 +3107,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libdisp-aba.so
 #vendor/lib64/libdpp_manager.so
 #vendor/lib64/libdpps.so
-#vendor/lib64/libdrmtime.so
+vendor/lib64/libdrmtime.so
 #vendor/lib64/libdsd2pcm.so
 #vendor/lib64/libeai_fixed.so
 #vendor/lib64/libeai_float.so
@@ -3118,12 +3120,12 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libgeofencing.so
 #vendor/lib64/libgnss.so
 #vendor/lib64/libgnsspps.so
-#vendor/lib64/libgpt.so
+vendor/lib64/libgpt.so
 #vendor/lib64/libgpudataproducer.so
 #vendor/lib64/libhdcp1prov.so
 #vendor/lib64/libhdcp2p2prov.so
 #vendor/lib64/libhdcpsrm.so
-#vendor/lib64/libhdr_tm.so
+vendor/lib64/libhdr_tm.so
 #vendor/lib64/libhfp_pal.so
 #vendor/lib64/libipebpsstriping.so
 #vendor/lib64/libiqi_bridge.so
@@ -3170,7 +3172,7 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/liboem_specific.so
 #vendor/lib64/liboemaids_vendor.so
 #vendor/lib64/libopestriping.so
-#vendor/lib64/libops.so
+vendor/lib64/libops.so
 #vendor/lib64/libos.so
 #vendor/lib64/libpalclient.so
 #vendor/lib64/libperfioctl.so
@@ -3211,11 +3213,11 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libqdp.so
 #vendor/lib64/libqdpr.so
 #vendor/lib64/libqesdk2_0.so
-#vendor/lib64/libqisl.so
+vendor/lib64/libqisl.so
 #vendor/lib64/libqmi_csvt_srvc.so
 #vendor/lib64/libqmi_legacy.so
 #vendor/lib64/libqmiextservices.so
-#vendor/lib64/libqseed3.so
+vendor/lib64/libqseed3.so
 #vendor/lib64/libqti-iopd.so
 #vendor/lib64/libqti-perfd.so
 #vendor/lib64/libqti-qesdk-secure.so
@@ -3227,11 +3229,11 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libreffeature.so
 #vendor/lib64/libril-qc-ltedirectdisc.so
 #vendor/lib64/libril-qc-radioconfig.so
-#vendor/lib64/librpmb.so
+vendor/lib64/librpmb.so
 #vendor/lib64/libsdm-colormgr-algo.so
 #vendor/lib64/libsdsprpc.so
-#vendor/lib64/libsecureui.so
-#vendor/lib64/libsecureui_svcsock.so
+vendor/lib64/libsecureui.so
+vendor/lib64/libsecureui_svcsock.so
 #vendor/lib64/libsfplugin_ccodec_utils.so
 #vendor/lib64/libsilkyscrolls.so
 #vendor/lib64/libskewknob.so
@@ -3242,9 +3244,9 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 #vendor/lib64/libsoc_helper_jni.so
 #vendor/lib64/libsoft_attestation_cert.so
 #vendor/lib64/libspcom.so
-#vendor/lib64/libspl.so
+vendor/lib64/libspl.so
 #vendor/lib64/libssc_default_listener.so
-#vendor/lib64/libssd.so
+vendor/lib64/libssd.so
 #vendor/lib64/libstreamparser.so
 #vendor/lib64/libsubsystem_control.so
 #vendor/lib64/libswregistrationalgo.so

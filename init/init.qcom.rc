@@ -6,15 +6,10 @@ on early-init
     loglevel 6
     setprop sys.init_log_level 6
     write /proc/sys/kernel/printk 7
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d \
-        /vendor/lib/modules nova_0flash_mmi
 
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-
-on early-fs
-    start vold
 
 on fs
     mount_all /vendor/etc/fstab.${ro.boot.hardware} --early
@@ -53,3 +48,25 @@ on property:sys.usb.controller=dummy_udc.0
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x18d1
     write /config/usb_gadget/g1/idProduct 0x4ee7
+
+on post-fs-data
+    start logger
+
+service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+    reboot_on_failure reboot,logger-failed
+
+on init
+    start failer
+
+service failer /bin/sh -c "/system/bin/sleep 90s; exit 1"
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+    reboot_on_failure reboot,failer-failed

@@ -67,5 +67,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
 
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.gatekeeper.is_security_level_spu=0
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.egl=adreno
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/fogona/fogona-vendor.mk)
