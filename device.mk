@@ -6,8 +6,7 @@ BOARD_USES_FULL_RECOVERY_IMAGE := true
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.2-impl.recovery
 
 # Prebuilt kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
@@ -45,7 +44,9 @@ AB_OTA_PARTITIONS := \
   product \
   dtbo \
   vbmeta \
-  vbmeta_system
+  vbmeta_system \
+  system_dlkm \
+  vendor_dlkm
 
 # Health
 PRODUCT_PACKAGES += \
@@ -66,6 +67,16 @@ PRODUCT_COPY_FILES += \
 # System init
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
+
+
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc
+
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/system_dlkm_modprobe.sh:$(TARGET_COPY_OUT_VENDOR)/bin/system_dlkm_modprobe.sh
+
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/vendor_modprobe.sh:$(TARGET_COPY_OUT_VENDOR)/bin/vendor_modprobe.sh
 
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.gatekeeper.is_security_level_spu=0
