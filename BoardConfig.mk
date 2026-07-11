@@ -82,7 +82,7 @@ BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     firmware_class.path=/vendor/firmware_mnt/image \
-    mem.enable_mglru=1 \
+    mem.enable_mglru=1
 
 # Fstab
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/init/fstab.recovery
