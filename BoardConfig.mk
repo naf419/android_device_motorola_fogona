@@ -1,6 +1,7 @@
 LOCAL_PATH := device/motorola/fogona
 
 TARGET_BOOTLOADER_BOARD_NAME = fogona
+TARGET_BOARD_PLATFORM := bengal
 
 # Identify CPU architecture & ABI
 TARGET_ARCH := arm64

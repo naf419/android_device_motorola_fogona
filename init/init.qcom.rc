@@ -65,10 +65,45 @@ service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
 on init
     start failer
 
-service failer /bin/sh -c "/system/bin/sleep 90s; exit 1"
+service failer /bin/sh -c "/system/bin/sleep 180s; exit 1"
     class main
     user root
     group root system
     disabled
     oneshot
     reboot_on_failure reboot,failer-failed
+
+on post-fs
+    wait_for_prop vendor.all.modules.ready 1
+    start lsmod_logger
+    start lsdev_logger
+    start lsfirm_logger
+    start lsmodem_logger
+
+service lsmod_logger /system/bin/logwrapper /system/bin/lsmod
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service lsdev_logger /system/bin/logwrapper /system/bin/sh -c "ls -l /dev/"
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service lsfirm_logger /system/bin/logwrapper /system/bin/sh -c "ls -l /vendor/firmware/"
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service lsmodem_logger /system/bin/logwrapper /system/bin/sh -c "ls -l /vendor/firmware_mnt/image/"
+    class main
+    user root
+    group root system
+    disabled
+    oneshot

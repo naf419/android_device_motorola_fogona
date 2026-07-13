@@ -8,6 +8,14 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
     android.hardware.boot@1.2-impl.recovery
 
+# Audio - Configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
+
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0-impl
+
 # Prebuilt kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 PRODUCT_COPY_FILES += \
@@ -53,12 +61,28 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service \
+    android.hardware.power-impl
+
+# Display
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # fastbootd
 PRODUCT_PACKAGES += \
         fastbootd
+
+# Mountpoints
+PRODUCT_PACKAGES += \
+    vendor_firmware_mnt_mountpoint
 
 # Recovery init script
 PRODUCT_COPY_FILES += \
@@ -81,11 +105,27 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
+#TODO: make these dirs correctly
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/firmware_mnt/dummy
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/bt_firmware/dummy
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/fsg/dummy
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/vendor/dsp/dummy
+
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.gatekeeper.is_security_level_spu=0
 
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.hardware.egl=adreno
+    ro.hardware.egl=adreno \
+    ro.sf.lcd_density=280 \
+    service.sf.prime_shader_cache=0
+
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/fogona/fogona-vendor.mk)
