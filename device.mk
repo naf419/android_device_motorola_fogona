@@ -14,7 +14,9 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.0-impl
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio.service
 
 # Prebuilt kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
@@ -92,7 +94,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
 
-
+#need sysfs fallback enabled for fw loading
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc
 
