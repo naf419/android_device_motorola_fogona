@@ -92,38 +92,49 @@ PRODUCT_COPY_FILES += \
 
 # System init
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
-
-#need sysfs fallback enabled for fw loading
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc
-
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/system_dlkm_modprobe.sh:$(TARGET_COPY_OUT_VENDOR)/bin/system_dlkm_modprobe.sh
-
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/vendor_modprobe.sh:$(TARGET_COPY_OUT_VENDOR)/bin/vendor_modprobe.sh
-
-PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc \
+        $(LOCAL_PATH)/init/init.class_main.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.class_main.sh \
+        $(LOCAL_PATH)/init/init.mmi.boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.boot.sh \
+        $(LOCAL_PATH)/init/init.mmi.charge_only.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.charge_only.rc \
+        $(LOCAL_PATH)/init/init.mmi.chipset.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.chipset.rc \
+        $(LOCAL_PATH)/init/init.mmi.debug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.debug.rc \
+        $(LOCAL_PATH)/init/init.mmi.diag_mdlog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.diag_mdlog.rc \
+        $(LOCAL_PATH)/init/init.mmi.display.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.display.sh \
+        $(LOCAL_PATH)/init/init.mmi.overlay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.overlay.rc \
+        $(LOCAL_PATH)/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.rc \
+        $(LOCAL_PATH)/init/init.mmi.tcmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.tcmd.rc \
+        $(LOCAL_PATH)/init/init.mmi.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.usb.rc \
+        $(LOCAL_PATH)/init/init.mmi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.usb.sh \
+        $(LOCAL_PATH)/init/init.mmi.wlan.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.wlan.rc \
+        $(LOCAL_PATH)/init/init.oem.hw.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.oem.hw.sh \
+        $(LOCAL_PATH)/init/init.qcom.class_core.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.class_core.sh \
+        $(LOCAL_PATH)/init/init.qcom.early_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.early_boot.sh \
+        $(LOCAL_PATH)/init/init.qcom.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.post_boot.sh \
+        $(LOCAL_PATH)/init/init.qcom.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sh \
+        $(LOCAL_PATH)/init/init.qti.write.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.write.sh \
+        $(LOCAL_PATH)/init/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc \
+        $(LOCAL_PATH)/init/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc \
+        $(LOCAL_PATH)/init/init.qcom.early_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.early_boot.sh \
+        $(LOCAL_PATH)/init/init.qti.early_init.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.early_init.sh \
+        $(LOCAL_PATH)/init/system_dlkm_modprobe.sh:$(TARGET_COPY_OUT_VENDOR)/bin/system_dlkm_modprobe.sh \
+        $(LOCAL_PATH)/init/vendor_modprobe.sh:$(TARGET_COPY_OUT_VENDOR)/bin/vendor_modprobe.sh \
         $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 #TODO: make these dirs correctly
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/firmware_mnt/dummy
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/bt_firmware/dummy
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/fsg/dummy
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/vendor/dsp/dummy
+        $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/firmware_mnt/dummy \
+        $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/bt_firmware/dummy \
+        $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/fsg/dummy \
+        $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/dsp/dummy
 
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.gatekeeper.is_security_level_spu=0
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.egl=adreno \
-    ro.sf.lcd_density=280 \
-    service.sf.prime_shader_cache=0
+    graphics.gpu.profiler.support=true \
+    ro.hardware.vulkan=adreno \
+    ro.opengles.version=196610
 
 # Vendor service manager
 PRODUCT_PACKAGES += \

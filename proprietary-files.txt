@@ -2299,9 +2299,9 @@ vendor/lib64/libtime_genoff.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # USB
-#vendor/bin/hw/android.hardware.usb@1.2-service-qti
-#vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
-#vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
+vendor/bin/hw/android.hardware.usb@1.2-service-qti
+vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
+vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
 
 # Vibrator
 #lib/motorola.hardware.vibrator@1.0.so
