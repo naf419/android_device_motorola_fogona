@@ -1575,13 +1575,13 @@ vendor/lib64/libstagefrighthw.so
 #system_ext/lib/vendor.qti.qspmhal@1.0.so
 #system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so
 #system_ext/lib64/vendor.qti.qspmhal@1.0.so
-#vendor/bin/vendor.qti.qspmhal@1.0-service
-#vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
-#vendor/etc/seccomp_policy/qspm.policy
-#vendor/lib/vendor.qti.qspmhal@1.0-impl.so
-#vendor/lib/vendor.qti.qspmhal@1.0.so
-#vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
-#vendor/lib64/vendor.qti.qspmhal@1.0.so
+vendor/bin/vendor.qti.qspmhal@1.0-service
+vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
+vendor/etc/seccomp_policy/qspm.policy
+vendor/lib/vendor.qti.qspmhal@1.0-impl.so
+vendor/lib/vendor.qti.qspmhal@1.0.so
+vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
+vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # QXR
 #system_ext/lib64/vendor.qti.hardware.qxr-V1-ndk_platform.so
@@ -2866,7 +2866,7 @@ vendor/firmware/wigig.ini
 #vendor/lib/libAlacSwDec.so
 #vendor/lib/libApeSwDec.so
 #vendor/lib/libC2D2.so
-#vendor/lib/libCB.so
+vendor/lib/libCB.so
 #vendor/lib/libEvrcSwCodec.so
 #vendor/lib/libFlacSwDec.so
 #vendor/lib/libGLESv2_adreno.so
@@ -2880,7 +2880,7 @@ vendor/firmware/wigig.ini
 #vendor/lib/lib_bt_ble.so
 #vendor/lib/lib_bt_bundle.so
 #vendor/lib/libadm.so
-#vendor/lib/libadreno_app_profiles.so
+vendor/lib/libadreno_app_profiles.so
 #vendor/lib/libadspd.so
 #vendor/lib/libagm_compress_plugin.so
 #vendor/lib/libagm_mixer_plugin.so
@@ -2933,8 +2933,8 @@ vendor/firmware/wigig.ini
 #vendor/lib/libkcl.so
 #vendor/lib/libkernelmanager.so
 #vendor/lib/libkeymasterprovision.so
-#vendor/lib/libllvm-qcom.so
-#vendor/lib/libllvm-qgl.so
+vendor/lib/libllvm-qcom.so
+vendor/lib/libllvm-qgl.so
 #vendor/lib/libloadtrusteduiapp.so
 #vendor/lib/libloc_api_wds.so
 #vendor/lib/libloc_eng_hub.so
@@ -3051,7 +3051,7 @@ vendor/firmware/wigig.ini
 #vendor/lib64/libAncFaceDetect.so
 #vendor/lib64/libApeSwDec.so
 #vendor/lib64/libC2D2.so
-#vendor/lib64/libCB.so
+vendor/lib64/libCB.so
 #vendor/lib64/libEvrcSwCodec.so
 #vendor/lib64/libFlacSwDec.so
 #vendor/lib64/libGLESv2_adreno.so
@@ -3068,7 +3068,7 @@ vendor/lib64/libStDrvInt.so
 #vendor/lib64/lib_modemapi_qc_hidl.so
 #vendor/lib64/libadaptlaunch.so
 #vendor/lib64/libadm.so
-#vendor/lib64/libadreno_app_profiles.so
+vendor/lib64/libadreno_app_profiles.so
 #vendor/lib64/libadropbox.so
 #vendor/lib64/libadspd.so
 #vendor/lib64/libagm_compress_plugin.so
@@ -3138,8 +3138,8 @@ vendor/lib64/libhdr_tm.so
 #vendor/lib64/libkeymint.so
 #vendor/lib64/liblearningmodule.so
 #vendor/lib64/liblightninglaunches.so
-#vendor/lib64/libllvm-qcom.so
-#vendor/lib64/libllvm-qgl.so
+vendor/lib64/libllvm-qcom.so
+vendor/lib64/libllvm-qgl.so
 #vendor/lib64/liblmthermallistner.so
 #vendor/lib64/liblmutils-ns.so
 #vendor/lib64/libloadalgo_stub.so

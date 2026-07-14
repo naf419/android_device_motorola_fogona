@@ -134,7 +134,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.egl=adreno \
     graphics.gpu.profiler.support=true \
     ro.hardware.vulkan=adreno \
-    ro.opengles.version=196610
+    ro.opengles.version=196610 \
+    vendor.gralloc.use_dma_buf_heaps=1 \
+    vendor.display.disable_layer_stitch 1 \
+    vendor.display.enable_rounded_corner 0 \
+    vendor.display.disable_rounded_corner_thread 0 \
+    vendor.display.enable_rc_support 0 \
+    vendor.display.enable_perf_hint_large_comp_cycle 1
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
