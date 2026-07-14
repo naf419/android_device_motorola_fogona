@@ -17,3 +17,4 @@ system_dlkm                     /system_dlkm         ext4    ro,barrier=1,discar
 /dev/block/bootdevice/by-name/bluetooth     /vendor/bt_firmware  ext4    ro,nosuid,nodev                                      wait,slotselect
 /dev/block/bootdevice/by-name/fsg           /vendor/fsg          ext4    ro,nosuid,nodev                                      wait,slotselect
 /dev/block/bootdevice/by-name/misc          /misc                emmc    defaults                                             defaults
+/dev/block/zram0                            none                 swap    defaults                                             zramsize=75%

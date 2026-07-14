@@ -975,10 +975,19 @@ service failer /bin/sh -c "/system/bin/sleep 180s; exit 1"
 
 on post-fs
     wait_for_prop vendor.all.modules.ready 1
+
+    #TODO: do this properly
+    #insmod /system_dlkm/lib/modules/zsmalloc.ko
+    #insmod /system_dlkm/lib/modules/zram.ko
+    #moto_swap for /dev/block/zram0?
+
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+    swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/swappiness 100
+    setprop sys.sysctl.swappiness 100
+
     start lsmod_logger
-    start lsdev_logger
-    start lsfirm_logger
-    start lsmodem_logger
     start lsinfo_logger
 
 service lsmod_logger /system/bin/logwrapper /system/bin/lsmod
@@ -988,28 +997,7 @@ service lsmod_logger /system/bin/logwrapper /system/bin/lsmod
     disabled
     oneshot
 
-service lsdev_logger /system/bin/logwrapper /system/bin/sh -c "ls -l /dev/"
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service lsfirm_logger /system/bin/logwrapper /system/bin/sh -c "ls -l /vendor/firmware/"
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service lsmodem_logger /system/bin/logwrapper /system/bin/sh -c "ls -l /vendor/firmware_mnt/image/"
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service lsinfo_logger /system/bin/logwrapper /system/bin/sh -c "set -x; cat /proc/mounts | grep configfs; lsof /config; ls -l /sys/class/usb_role; ls -l /sys/class/udc; ls -l /sys/class/udc/4e00000.dwc3; ls -l /sys/class/udc/4e00000.dwc3/device; cat /sys/class/udc/4e00000.dwc3/device/../mode"
+service lsinfo_logger /system/bin/logwrapper /system/bin/sh -c "set -x; cat /proc/mounts | grep configfs; lsof /config; ls -l /sys/class/usb_role; ls -l /sys/class/udc; ls -l /sys/class/udc/4e00000.dwc3; ls -l /sys/class/udc/4e00000.dwc3/device; cat /sys/class/udc/4e00000.dwc3/device/../mode; ls -l /sys/bus/platform/devices/; ls -l /sys/bus/platform/devices/4e00000.ssusb; ls -l /dev; ls -l /dev/block; cat /proc/swaps; free -h"
     class main
     user root
     group root system
@@ -1017,9 +1005,9 @@ service lsinfo_logger /system/bin/logwrapper /system/bin/sh -c "set -x; cat /pro
     oneshot
 
 
-on property:ro.boot.usbcontroller=*
-    setprop sys.usb.config none
-    setprop sys.usb.configfs 1
-
-    wait /sys/class/udc/${ro.boot.usbcontroller}/device/../mode
-    write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
+#on property:ro.boot.usbcontroller=*
+#    setprop sys.usb.config none
+#    setprop sys.usb.configfs 1
+#
+#    wait /sys/class/udc/${ro.boot.usbcontroller}/device/../mode
+#    write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
