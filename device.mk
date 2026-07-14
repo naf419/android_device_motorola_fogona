@@ -132,6 +132,14 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.gatekeeper.is_security_level_spu=0
 
 PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapsize=256m \
+    dalvik.vm.heapgrowthlimit=128m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m
+
+PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.egl=adreno \
     graphics.gpu.profiler.support=true \
     ro.hardware.vulkan=adreno \
