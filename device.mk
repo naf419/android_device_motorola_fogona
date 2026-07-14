@@ -100,9 +100,11 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.mmi.debug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.debug.rc \
         $(LOCAL_PATH)/init/init.mmi.diag_mdlog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.diag_mdlog.rc \
         $(LOCAL_PATH)/init/init.mmi.display.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.display.sh \
+        $(LOCAL_PATH)/init/init.mmi.modules.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.modules.sh \
         $(LOCAL_PATH)/init/init.mmi.overlay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.overlay.rc \
         $(LOCAL_PATH)/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.rc \
         $(LOCAL_PATH)/init/init.mmi.tcmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.tcmd.rc \
+        $(LOCAL_PATH)/init/init.mmi.touch.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.touch.sh \
         $(LOCAL_PATH)/init/init.mmi.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.usb.rc \
         $(LOCAL_PATH)/init/init.mmi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.usb.sh \
         $(LOCAL_PATH)/init/init.mmi.wlan.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.wlan.rc \

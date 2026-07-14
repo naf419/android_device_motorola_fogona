@@ -536,7 +536,7 @@ service vendor.hw_revs /vendor/bin/hardware_revisions.sh
     group system
     oneshot
 
-service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
+service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh -d
     class core
     user root
     oneshot
