@@ -951,28 +951,10 @@ on property:vendor.opengles.version=*
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
 
-on post-fs-data
-    start logger
 
-service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-    reboot_on_failure reboot,logger-failed
 
-on init
-    start failer
 
-service failer /bin/sh -c "/system/bin/sleep 180s; exit 1"
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-    reboot_on_failure reboot,failer-failed
-
+#NAF
 on post-fs
     wait_for_prop vendor.all.modules.ready 1
 
@@ -986,28 +968,3 @@ on post-fs
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 100
     setprop sys.sysctl.swappiness 100
-
-    start lsmod_logger
-    start lsinfo_logger
-
-service lsmod_logger /system/bin/logwrapper /system/bin/lsmod
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service lsinfo_logger /system/bin/logwrapper /system/bin/sh -c "set -x; cat /proc/mounts | grep configfs; lsof /config; ls -l /sys/class/usb_role; ls -l /sys/class/udc; ls -l /sys/class/udc/4e00000.dwc3; ls -l /sys/class/udc/4e00000.dwc3/device; cat /sys/class/udc/4e00000.dwc3/device/../mode; ls -l /sys/bus/platform/devices/; ls -l /sys/bus/platform/devices/4e00000.ssusb; ls -l /dev; ls -l /dev/block; cat /proc/swaps; free -h"
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-
-#on property:ro.boot.usbcontroller=*
-#    setprop sys.usb.config none
-#    setprop sys.usb.configfs 1
-#
-#    wait /sys/class/udc/${ro.boot.usbcontroller}/device/../mode
-#    write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
