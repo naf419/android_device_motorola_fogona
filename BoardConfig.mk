@@ -85,6 +85,13 @@ BOARD_KERNEL_CMDLINE := \
     firmware_class.path=/vendor/firmware_mnt/image \
     mem.enable_mglru=1
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := \
+    $(LOCAL_PATH)/config.fs
+
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /vendor/fsg:/fsg
+
 # Fstab
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/init/fstab.recovery
 

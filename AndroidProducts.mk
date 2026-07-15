@@ -1,5 +1,5 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/aosp_fogona.mk
+	$(LOCAL_DIR)/lineage_fogona.mk
 
 COMMON_LUNCH_CHOICES := \
-	aosp_fogona-eng
+	lineage_fogona-eng
