@@ -63,16 +63,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service \
-    android.hardware.power-impl
-
 # Display
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
-    android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display
 
 # Dynamic partitions
@@ -81,10 +75,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # fastbootd
 PRODUCT_PACKAGES += \
         fastbootd
-
-# Mountpoints
-PRODUCT_PACKAGES += \
-    vendor_firmware_mnt_mountpoint
 
 # Recovery init script
 PRODUCT_COPY_FILES += \
@@ -129,6 +119,7 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/bt_firmware/dummy \
         $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/fsg/dummy \
         $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/dsp/dummy
+
 
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.gatekeeper.is_security_level_spu=0
