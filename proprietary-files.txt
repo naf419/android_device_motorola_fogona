@@ -204,10 +204,12 @@ vendor/lib64/libqmi_encdec.so
 #vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
 
 # Bluetooth
-#vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-#vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 #vendor/lib/libqti_vndfwk_detect_vendor.so
-#vendor/lib64/libqti_vndfwk_detect_vendor.so
+vendor/lib64/libqti_vndfwk_detect_vendor.so
+#vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # Bluetooth (A2DP)
 #lib/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
@@ -246,9 +248,9 @@ vendor/lib64/libqmi_encdec.so
 #vendor/lib64/hw/audio.bluetooth_qti.default.so
 #vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 #vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-#vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-#vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-#vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 #vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
 #vendor/lib64/libbluetooth_audio_session.so
 #vendor/lib64/libbluetooth_audio_session_aidl.so
@@ -256,8 +258,8 @@ vendor/lib64/libqmi_encdec.so
 #vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 #vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so
 #vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so
-#vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-#vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 #vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 #vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so
 
@@ -743,10 +745,10 @@ vendor/lib/libmdmdetect.so
 #vendor/lib/vendor.qti.latency@2.2.so
 #vendor/lib64/libcne.so
 #vendor/lib64/libcneapiclient.so
-#vendor/lib64/libdsutils.so
-#vendor/lib64/libidl.so
+vendor/lib64/libdsutils.so
+vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
-#vendor/lib64/libqmiservices.so
+vendor/lib64/libqmiservices.so
 #vendor/lib64/libshsc.so
 #vendor/lib64/libwpa_client.so
 #vendor/lib64/vendor.qti.data.factory@2.0.so
@@ -789,12 +791,12 @@ vendor/lib64/libmdmdetect.so
 # Configstore
 #system_ext/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so
 #system_ext/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
-#vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 #vendor/etc/configstore/wigig.xml
-#vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 #vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 #vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so
-#vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 #vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
 
 # CVP
@@ -1114,7 +1116,7 @@ vendor/firmware/a730_zap.mdt
 #vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 #vendor/lib64/libdpmqmihal.so
 #vendor/lib64/libqmi_client_helper.so
-#vendor/lib64/libqmi_client_qmux.so
+vendor/lib64/libqmi_client_qmux.so
 #vendor/lib64/vendor.qti.diaghal@1.0.so
 #vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so
 #vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
@@ -1208,9 +1210,9 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 #vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 #vendor/lib/libqmi.so
 #vendor/lib/vendor.qti.hardware.fm@1.0.so
-#vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-#vendor/lib64/libqmi.so
-#vendor/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib64/libqmi.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -1398,8 +1400,8 @@ vendor/lib64/libqtikeymaster4.so
 #vendor/lib64/libqc2audio_utils.so
 #vendor/lib64/libstagefright_bufferpool@2.0.1.so
 #vendor/lib64/libstagefrighthw.so
-#vendor/lib64/vendor.qti.hardware.vpp@1.1.so
-#vendor/lib64/vendor.qti.hardware.vpp@1.2.so
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
 # Media (Dolby)
 #vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
@@ -2085,22 +2087,22 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 #vendor/lib64/hw/android.hardware.renderscript@1.0-impl.so
 
 # Secure element
-#vendor/bin/hw/vendor.qti.secure_element@1.2-service
-#vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 #vendor/lib/android.hardware.secure_element@1.0-impl.so
 #vendor/lib/libesepmconfig.so
-#vendor/lib64/android.hardware.secure_element@1.0-impl.so
-#vendor/lib64/libesepmconfig.so
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/libesepmconfig.so
 
 # Secure element (power manager)
-#vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-#vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 #vendor/lib/hw/vendor.qti.esepowermanager@1.1-impl.so
 #vendor/lib/vendor.qti.esepowermanager@1.0.so
 #vendor/lib/vendor.qti.esepowermanager@1.1.so
-#vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-#vendor/lib64/vendor.qti.esepowermanager@1.0.so
-#vendor/lib64/vendor.qti.esepowermanager@1.1.so
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Security
 vendor/bin/hw/android.hardware.security.keymint-service-qti
@@ -2320,7 +2322,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 #vendor/lib64/libaacvibrator.so
 #vendor/lib64/libqtivibratoreffect.so
 #vendor/lib64/libqtivibratoreffectoffload.so
-#vendor/lib64/libsoc_helper.so
+vendor/lib64/libsoc_helper.so
 #vendor/lib64/motorola.hardware.vibrator@1.0.so
 #vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
 #vendor/lib64/vendor.qti.hardware.vibrator.impl.so
@@ -3087,7 +3089,7 @@ vendor/lib64/libadreno_app_profiles.so
 #vendor/lib64/libbinderdebug.so
 #vendor/lib64/libboot_control_qti.so
 #vendor/lib64/libbt-hidlclient.so
-#vendor/lib64/libbtnv.so
+vendor/lib64/libbtnv.so
 #vendor/lib64/libc2d30_bltlib.so
 #vendor/lib64/libcacertclient.so
 #vendor/lib64/libcamera2ndk_vendor.so
