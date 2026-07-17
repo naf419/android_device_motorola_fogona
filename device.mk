@@ -165,30 +165,6 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/dsp/dummy
 
 
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.gatekeeper.is_security_level_spu=0
-
-# TODO: use frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk?
-PRODUCT_VENDOR_PROPERTIES += \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapsize=256m \
-    dalvik.vm.heapgrowthlimit=128m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m
-
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.hardware.egl=adreno \
-    graphics.gpu.profiler.support=true \
-    ro.hardware.vulkan=adreno \
-    ro.opengles.version=196610 \
-    vendor.gralloc.use_dma_buf_heaps=1 \
-    vendor.display.disable_layer_stitch 1 \
-    vendor.display.enable_rounded_corner 0 \
-    vendor.display.disable_rounded_corner_thread 0 \
-    vendor.display.enable_rc_support 0 \
-    vendor.display.enable_perf_hint_large_comp_cycle 1
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
