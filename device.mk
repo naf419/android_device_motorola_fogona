@@ -77,6 +77,13 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
         fastbootd
 
+# Media
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxCore \
+    libstagefrighthw \
+    libplatformconfig
+
 # Recovery init script
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
@@ -159,8 +166,12 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
     libwifi-hal-qcom \
+    libwifi-hal-ctrl \
     wpa_supplicant \
     wpa_supplicant.conf
+
+PRODUCT_PACKAGES += \
+    WifiResCommonOverlay
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \

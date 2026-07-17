@@ -971,7 +971,7 @@ on post-fs
 
 
 on post-fs-data
-    start logger
+    #start logger
 
 service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
     class main
@@ -982,7 +982,7 @@ service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
     reboot_on_failure reboot,logger-failed
 
 on init
-    start failer
+    #start failer
 
 service failer /bin/sh -c "/system/bin/sleep 180s; exit 1"
     class main

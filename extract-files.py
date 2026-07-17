@@ -17,7 +17,8 @@ from extract_utils.fixups_blob import (
 namespace_imports = [
     'device/motorola/fogona',
     'vendor/qcom/opensource/display',
-    'hardware/qcom-caf/sm8250-5.15'
+    'hardware/qcom-caf/sm8250-5.15',
+    'hardware/qcom-caf/wlan'
 ]
 
 blob_fixups: blob_fixups_user_type = {
