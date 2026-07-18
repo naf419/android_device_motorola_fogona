@@ -18,11 +18,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service
 
-# Prebuilt kernel
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
-PRODUCT_COPY_FILES += \
-	$(TARGET_PREBUILT_KERNEL):kernel
-
 PRODUCT_PLATFORM := qcom
 
 # VINTF
