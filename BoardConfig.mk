@@ -56,32 +56,24 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 
-TARGET_KERNEL_CONFIG := gki_defconfig vendor/bengal_GKI.config vendor/ext_config/moto-bengal.config vendor/ext_config/moto-bengal-fogona.config
-TARGET_KERNEL_SOURCE := kernel/motorola/sm6225
-BOARD_KERNEL_IMAGE_NAME := Image
-
-# Kernel modules
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/motorola/sm6225-modules
-
+TARGET_KERNEL_SOURCE=$(LOCAL_PATH)/prebuilt/kernel-headers
+TARGET_KERNEL_VERSION=5.15
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
-
-BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.system_dlkm))
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
-BOOT_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load) $(LOCAL_PATH)/modules.load.vendor_boot))
-SYSTEM_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load.system_dlkm))
-
-TARGET_KERNEL_EXT_MODULES := \
-  qcom/opensource/wlan/platform \
-  qcom/opensource/wlan/qcacld-3.0
 
 # Kernel Modules - Vendor Boot
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/prebuilt/modules/system_dlkm/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/prebuilt/modules/vendor_dlkm/modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat  $(LOCAL_PATH)/prebuilt/modules/vendor_ramdisk/modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/prebuilt/modules/vendor_ramdisk/modules.blocklist
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/prebuilt/modules/vendor_ramdisk/modules.load.recovery))
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules/vendor_ramdisk/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/5.15.185-android13-8-04849-g188ff26af9df-ab) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules/vendor_dlkm/,$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules)
 
 BOARD_USES_SYSTEM_DLKMIMAGE := true
 BOARD_USES_VENDOR_DLKMIMAGE := true
