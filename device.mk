@@ -70,6 +70,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.memtrack-service
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -129,6 +133,13 @@ PRODUCT_PACKAGES += \
 # Recovery init script
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor \
+    android.hardware.sensors@2.0-service.multihal \
+    libpower.vendor \
+    libsensorndkbridge
 
 # System init
 PRODUCT_COPY_FILES += \

@@ -537,8 +537,8 @@ vendor/lib64/libOpenCL.so
 #vendor/lib64/libopencv.so
 #vendor/lib64/libqdMetaData.so
 #vendor/lib64/libqti_vndfwk_detect.so
-#vendor/lib64/libsensorslog.so
-#vendor/lib64/libsnsapi.so
+vendor/lib64/libsensorslog.so
+vendor/lib64/libsnsapi.so
 #vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
 #vendor/lib64/motorola.hardware.camera.imgtuner@2.0.so
 #vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
@@ -1122,9 +1122,9 @@ vendor/lib64/vendor.qti.diaghal@1.0.so
 #vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
 
 # DRM
-vendor/bin/hw/android.hardware.drm-service.clearkey
+#vendor/bin/hw/android.hardware.drm-service.clearkey
 vendor/bin/hw/android.hardware.drm-service.widevine
-vendor/etc/init/android.hardware.drm-service.clearkey.rc
+#vendor/etc/init/android.hardware.drm-service.clearkey.rc
 vendor/etc/init/android.hardware.drm-service.widevine.rc
 vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
 #vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
@@ -2045,8 +2045,8 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 #vendor/lib64/lib-rtpcommon.so
 #vendor/lib64/lib-rtpcore.so
 #vendor/lib64/lib-rtpsl.so
-#vendor/lib64/libdsi_netctrl.so
-#vendor/lib64/libqdi.so
+vendor/lib64/libdsi_netctrl.so
+vendor/lib64/libqdi.so
 #vendor/lib64/librcc.so
 vendor/lib64/vendor.qti.hardware.radio.ims-V9-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
@@ -2113,11 +2113,11 @@ vendor/lib64/libqtikeymint.so
 
 # Sensors
 #vendor/bin/hw/android.hardware.sensors@2.1-service.multihal
-#vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-#vendor/bin/sensors.qti
-#vendor/bin/sscrpcd
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/bin/sensors.qti
+vendor/bin/sscrpcd
 #vendor/etc/init/android.hardware.sensors@2.1-service-multihal.rc
-#vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 #vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.xml
 #vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 #vendor/lib/libsensorcal.so
@@ -2128,15 +2128,15 @@ vendor/lib64/libqtikeymint.so
 #vendor/lib/sensors.moto.so
 #vendor/lib/sensors.ssc.so
 #vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-#vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-#vendor/lib64/libsensorcal.so
-#vendor/lib64/libsns_device_mode_stub.so
-#vendor/lib64/libsns_fastRPC_util.so
-#vendor/lib64/libsnsdiaglog.so
-#vendor/lib64/libssc.so
-#vendor/lib64/sensors.moto.so
-#vendor/lib64/sensors.ssc.so
-#vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/libsensorcal.so
+vendor/lib64/libsns_device_mode_stub.so
+vendor/lib64/libsns_fastRPC_util.so
+vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libssc.so
+vendor/lib64/sensors.moto.so
+vendor/lib64/sensors.ssc.so
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensors configs
 #vendor/etc/sensors/config/bengal_default_sensors.json
@@ -2570,7 +2570,7 @@ vendor/bin/pm-service
 #vendor/bin/qcc-trd
 #vendor/bin/qdcmss
 #vendor/bin/qguard
-#vendor/bin/qmi_motext_hook
+vendor/bin/qmi_motext_hook
 #vendor/bin/qmipriod
 #vendor/bin/qms
 #vendor/bin/qsap_qapeservice
@@ -2613,8 +2613,8 @@ vendor/bin/pm-service
 #vendor/etc/aualgo/aualgo_azp.conf
 #vendor/etc/bstconfig/bstai_hdr
 #vendor/etc/bstconfig/hdrcfg.cfg
-#vendor/etc/data/dsi_config.xml
-#vendor/etc/data/netmgr_config.xml
+vendor/etc/data/dsi_config.xml
+vendor/etc/data/netmgr_config.xml
 #vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 #vendor/etc/diag_mdlog/4G_5G_Throughput_light_V1.cfg
 #vendor/etc/diag_mdlog/ADSP-sensor.cfg
@@ -2676,7 +2676,7 @@ vendor/bin/pm-service
 #vendor/etc/init/vendor.qsap.qapeservice.rc
 #vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 #vendor/etc/init/vendor.qti.battery_stats.rc
-#vendor/etc/init/vendor.qti.diag_userdebug.rc
+vendor/etc/init/vendor.qti.diag_userdebug.rc
 #vendor/etc/init/vendor.qti.hardware.lights.service.rc
 #vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
 #vendor/etc/init/vendor.sensors.qti.rc
@@ -2741,9 +2741,9 @@ vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 #vendor/etc/vintf/manifest/memtrack_qti.xml
 #vendor/etc/vintf/manifest/motorola.hardware.power.service.xml
 #vendor/etc/vintf/manifest/power.xml
-#vendor/etc/vintf/manifest/qcrilhook-saidl.xml
-#vendor/etc/vintf/manifest/qms-saidl.xml
-#vendor/etc/vintf/manifest/qtiradio-saidl.xml
+vendor/etc/vintf/manifest/qcrilhook-saidl.xml
+vendor/etc/vintf/manifest/qms-saidl.xml
+vendor/etc/vintf/manifest/qtiradio-saidl.xml
 #vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 #vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
 #vendor/etc/vintf/manifest/vendor.trustonic.hardware.alps.xml
@@ -3072,7 +3072,7 @@ vendor/lib64/libStDrvInt.so
 #vendor/lib64/libadaptlaunch.so
 #vendor/lib64/libadm.so
 vendor/lib64/libadreno_app_profiles.so
-#vendor/lib64/libadropbox.so
+vendor/lib64/libadropbox.so
 #vendor/lib64/libadspd.so
 #vendor/lib64/libagm_compress_plugin.so
 #vendor/lib64/libagm_mixer_plugin.so
@@ -3204,18 +3204,18 @@ vendor/lib64/libperfioctl.so
 #vendor/lib64/libqcodec2_platform.so
 #vendor/lib64/libqcodec2_utils.so
 #vendor/lib64/libqcodec2_v4l2codec.so
-#vendor/lib64/libqcrilDataModule.so
-#vendor/lib64/libqcrilNrCellInfoModule.so
-#vendor/lib64/libqcrilNrImsModule.so
-#vendor/lib64/libqcrilNrPbmModule.so
-#vendor/lib64/libqcrilNrSmsModule.so
-#vendor/lib64/libqcrilNrSocketModule.so
-#vendor/lib64/libqcrilNrVoiceModule.so
-#vendor/lib64/libqcrildataaidl.so
-#vendor/lib64/libqcrildatactl.so
-#vendor/lib64/libqcrildataqos.so
+vendor/lib64/libqcrilDataModule.so
+vendor/lib64/libqcrilNrCellInfoModule.so
+vendor/lib64/libqcrilNrImsModule.so
+vendor/lib64/libqcrilNrPbmModule.so
+vendor/lib64/libqcrilNrSmsModule.so
+vendor/lib64/libqcrilNrSocketModule.so
+vendor/lib64/libqcrilNrVoiceModule.so
+vendor/lib64/libqcrildataaidl.so
+vendor/lib64/libqcrildatactl.so
+vendor/lib64/libqcrildataqos.so
 #vendor/lib64/libqdp.so
-#vendor/lib64/libqdpr.so
+vendor/lib64/libqdpr.so
 #vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqisl.so
 #vendor/lib64/libqmi_csvt_srvc.so
