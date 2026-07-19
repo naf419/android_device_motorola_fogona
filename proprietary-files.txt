@@ -750,7 +750,7 @@ vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libqmiservices.so
 #vendor/lib64/libshsc.so
-vendor/lib64/libwpa_client.so
+#vendor/lib64/libwpa_client.so
 #vendor/lib64/vendor.qti.data.factory@2.0.so
 #vendor/lib64/vendor.qti.data.factory@2.1.so
 #vendor/lib64/vendor.qti.data.factory@2.2.so
@@ -1229,7 +1229,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GNSS
 #vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 #vendor/bin/loc_launcher
-vendor/bin/lowi-server;DISABLE_CHECKELF;DISABLE_DEPS
+#vendor/bin/lowi-server
 #vendor/bin/xtra-daemon
 #vendor/bin/xtwifi-client
 #vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
@@ -2331,39 +2331,39 @@ vendor/lib64/libsoc_helper.so
 vendor/firmware/aw869x_rtp.bin
 
 # Wi-Fi
-vendor/bin/hw/android.hardware.wifi@1.0-service
-vendor/bin/hw/hostapd
-vendor/bin/hw/wpa_supplicant
+#vendor/bin/hw/android.hardware.wifi@1.0-service
+#vendor/bin/hw/hostapd
+#vendor/bin/hw/wpa_supplicant
 vendor/bin/cnss-daemon
 #vendor/bin/hostapd_cli
 #vendor/bin/wpa_cli
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/init/android.hardware.wifi@1.0-service.rc
+#vendor/etc/init/android.hardware.wifi.supplicant-service.rc
+#vendor/etc/init/android.hardware.wifi@1.0-service.rc
 #vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
-vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
-vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
-vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
+#vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
+#vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
+#vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 #vendor/lib/libwifi-hal-ctrl.so
 #vendor/lib/libwifi-hal-qcom.so
 #vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
-vendor/lib64/libcert_parse.wpa_s.so
-vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
-vendor/lib64/libwifi-hal-ctrl.so
-vendor/lib64/libwifi-hal-qcom.so;DISABLE_CHECKELF
-vendor/lib64/libwifi-hal.so
+#vendor/lib64/libcert_parse.wpa_s.so
+#vendor/lib64/libkeystore-engine-wifi-hidl.so
+#vendor/lib64/libkeystore-wifi-hidl.so
+#vendor/lib64/libwifi-hal-ctrl.so
+#vendor/lib64/libwifi-hal-qcom.so
+#vendor/lib64/libwifi-hal.so
 #vendor/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so
 #vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 #vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
-vendor/lib64/libcld80211.so
+#vendor/lib64/libcld80211.so
 
 # Wi-Fi configs
 #vendor/etc/wifi/WCNSS_qcom_cfg.ini
 #vendor/etc/wifi/icm.conf
 #vendor/etc/wifi/p2p_supplicant_overlay.conf
 #vendor/etc/wifi/wfdr2_regex.conf
-vendor/etc/wifi/wpa_supplicant.conf
-vendor/etc/wifi/wpa_supplicant_overlay.conf
+#vendor/etc/wifi/wpa_supplicant.conf
+#vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
 #system_ext/bin/wfdservice

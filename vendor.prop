@@ -1,7 +1,3 @@
-#FOR DEBUG:
-persist.vendor.cnss-daemon.debug_level=9
-persist.vendor.cnss-daemon.kmsg_logging=9
-
 # Chipset
 ro.soc.manufacturer=QTI
 
