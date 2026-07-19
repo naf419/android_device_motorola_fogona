@@ -137,7 +137,7 @@ vendor/lib/libqmi_encdec.so
 #vendor/lib64/libaualgo_foundation.so
 #TODO audio vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libdiag.so
-#vendor/lib64/libjson.so
+vendor/lib64/libjson.so
 #TODO audio vendor/lib64/liblx-ar_util.so
 #TODO audio vendor/lib64/liblx-osal.so
 #vendor/lib64/libmediautils_vendor.so
@@ -750,7 +750,7 @@ vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libqmiservices.so
 #vendor/lib64/libshsc.so
-#vendor/lib64/libwpa_client.so
+vendor/lib64/libwpa_client.so
 #vendor/lib64/vendor.qti.data.factory@2.0.so
 #vendor/lib64/vendor.qti.data.factory@2.1.so
 #vendor/lib64/vendor.qti.data.factory@2.2.so
@@ -1104,8 +1104,8 @@ vendor/firmware/a730_zap.mdt
 #system_ext/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so
 #system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
 #system_ext/lib64/vendor.qti.hardware.dpmservice@1.1.so
-#vendor/bin/dpmQmiMgr
-#vendor/etc/init/dpmQmiMgr.rc
+vendor/bin/dpmQmiMgr
+vendor/etc/init/dpmQmiMgr.rc
 #vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
 #vendor/lib/libdpmqmihal.so
 #vendor/lib/libqmi_client_helper.so
@@ -1113,11 +1113,11 @@ vendor/firmware/a730_zap.mdt
 #vendor/lib/vendor.qti.diaghal@1.0.so
 #vendor/lib/vendor.qti.hardware.dpmservice@1.0.so
 #vendor/lib/vendor.qti.hardware.dpmservice@1.1.so
-#vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
-#vendor/lib64/libdpmqmihal.so
-#vendor/lib64/libqmi_client_helper.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib64/libdpmqmihal.so
+vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
-#vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib64/vendor.qti.diaghal@1.0.so
 #vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so
 #vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
 
@@ -1229,7 +1229,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GNSS
 #vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 #vendor/bin/loc_launcher
-#vendor/bin/lowi-server
+vendor/bin/lowi-server;DISABLE_CHECKELF;DISABLE_DEPS
 #vendor/bin/xtra-daemon
 #vendor/bin/xtwifi-client
 #vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
@@ -1261,20 +1261,20 @@ vendor/lib/libperipheral_client.so
 #vendor/lib/vendor.qti.gnss-service.so
 #vendor/lib64/libdataitems.so
 #vendor/lib64/libgdtap.so
-#vendor/lib64/libgps.utils.so
+vendor/lib64/libgps.utils.so
 #vendor/lib64/libizat_client_api.so
 #vendor/lib64/libizat_core.so
 #vendor/lib64/liblbs_core.so
 #vendor/lib64/libloc_api_v02.so
-#vendor/lib64/libloc_base_util.so
+vendor/lib64/libloc_base_util.so
 #vendor/lib64/libloc_core.so
-#vendor/lib64/libloc_mq_client.so
+vendor/lib64/libloc_mq_client.so
 #vendor/lib64/libloc_util.so
 #vendor/lib64/liblocation_api.so
 #vendor/lib64/liblocationservice.so
 #vendor/lib64/liblocationservice_glue.so
-#vendor/lib64/liblowi_client.so
-#vendor/lib64/liblowi_common.so
+vendor/lib64/liblowi_client.so
+vendor/lib64/liblowi_common.so
 #vendor/lib64/libpal_net_if.so
 vendor/lib64/libperipheral_client.so
 #vendor/lib64/libqcc_file_agent.so
@@ -1288,7 +1288,7 @@ vendor/lib64/libperipheral_client.so
 #vendor/etc/apdr.conf
 #vendor/etc/gps.conf
 #vendor/etc/izat.conf
-#vendor/etc/lowi.conf
+vendor/etc/lowi.conf
 #vendor/etc/sap.conf
 #vendor/etc/xtwifi.conf
 
@@ -1642,25 +1642,25 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 #system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 #vendor/app/IWlanService/IWlanService.apk
 #vendor/bin/hw/qcrilNrd
-#vendor/bin/ATFWD-daemon
+vendor/bin/ATFWD-daemon
 #vendor/bin/adpl
 #vendor/bin/ks
 #vendor/bin/netmgrd
-#vendor/bin/pd-mapper
+vendor/bin/pd-mapper
 #vendor/bin/port-bridge
-#vendor/bin/qrtr-cfg
-#vendor/bin/qrtr-lookup
-#vendor/bin/qrtr-ns
+vendor/bin/qrtr-cfg
+vendor/bin/qrtr-lookup
+vendor/bin/qrtr-ns
 #vendor/bin/qti
-#vendor/bin/rmt_storage
-#vendor/bin/tftp_server
+vendor/bin/rmt_storage
+vendor/bin/tftp_server
 #vendor/etc/init/dataadpl.rc
 #vendor/etc/init/dataqti.rc
 #vendor/etc/init/netmgrd.rc
 #vendor/etc/init/port-bridge.rc
 #vendor/etc/init/qcrilNrd.rc
-#vendor/etc/init/vendor.qti.rmt_storage_qmaa.rc
-#vendor/etc/init/vendor.qti.tftp_qmaa.rc
+vendor/etc/init/vendor.qti.rmt_storage_qmaa.rc
+vendor/etc/init/vendor.qti.tftp_qmaa.rc
 #vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 #vendor/etc/qcril_database/upgrade/config/11.0_config.sql
 #vendor/etc/qcril_database/upgrade/config/12.0_config.sql
@@ -1714,7 +1714,7 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 #vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql
 #vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql
 #vendor/etc/qcril_database/qcrilNr.db
-#vendor/etc/seccomp_policy/atfwd@2.0.policy
+vendor/etc/seccomp_policy/atfwd@2.0.policy
 #vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 #vendor/etc/vintf/manifest/android.hardware.radio.data.xml
 #vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml
@@ -1818,10 +1818,10 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 #vendor/lib64/libqcrilNrLogger.so
 #vendor/lib64/libqcrilNrQtiBus.so
 #vendor/lib64/libqcrilNrQtiMutex.so
-#vendor/lib64/libqmi_csi.so
+vendor/lib64/libqmi_csi.so
 #vendor/lib64/libqmimotext.so
 #vendor/lib64/libqsap_sdk.so
-#vendor/lib64/libqsocket.so
+vendor/lib64/libqsocket.so
 #vendor/lib64/libril-db.so
 #vendor/lib64/libril-legacy.so
 #vendor/lib64/librilqmimiscservices.so
@@ -1849,8 +1849,8 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 #vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 #vendor/lib64/vendor.qti.hardware.radio.am-V1-ndk.so
 #vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
-#vendor/lib64/vendor.qti.hardware.radio.atcmdfwd-V1-ndk.so
-#vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.atcmdfwd-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 #vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo-V1-ndk.so
 #vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
 #vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
@@ -2331,38 +2331,39 @@ vendor/lib64/libsoc_helper.so
 vendor/firmware/aw869x_rtp.bin
 
 # Wi-Fi
-#vendor/bin/hw/android.hardware.wifi@1.0-service
-#vendor/bin/hw/hostapd
-#vendor/bin/hw/wpa_supplicant
+vendor/bin/hw/android.hardware.wifi@1.0-service
+vendor/bin/hw/hostapd
+vendor/bin/hw/wpa_supplicant
 vendor/bin/cnss-daemon
 #vendor/bin/hostapd_cli
 #vendor/bin/wpa_cli
-#vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-#vendor/etc/init/android.hardware.wifi@1.0-service.rc
+vendor/etc/init/android.hardware.wifi.supplicant-service.rc
+vendor/etc/init/android.hardware.wifi@1.0-service.rc
 #vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
-#vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
-#vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
-#vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
+vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
+vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
+vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 #vendor/lib/libwifi-hal-ctrl.so
-#vendor/lib/libwifi-hal-qcom.so;DISABLE_CHECKELF
+#vendor/lib/libwifi-hal-qcom.so
 #vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
-#vendor/lib64/libcert_parse.wpa_s.so
-#vendor/lib64/libkeystore-engine-wifi-hidl.so
-#vendor/lib64/libkeystore-wifi-hidl.so
-#vendor/lib64/libwifi-hal-ctrl.so
-#vendor/lib64/libwifi-hal-qcom.so;DISABLE_CHECKELF
-#vendor/lib64/libwifi-hal.so
+vendor/lib64/libcert_parse.wpa_s.so
+vendor/lib64/libkeystore-engine-wifi-hidl.so
+vendor/lib64/libkeystore-wifi-hidl.so
+vendor/lib64/libwifi-hal-ctrl.so
+vendor/lib64/libwifi-hal-qcom.so;DISABLE_CHECKELF
+vendor/lib64/libwifi-hal.so
 #vendor/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so
 #vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 #vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
+vendor/lib64/libcld80211.so
 
 # Wi-Fi configs
 #vendor/etc/wifi/WCNSS_qcom_cfg.ini
 #vendor/etc/wifi/icm.conf
 #vendor/etc/wifi/p2p_supplicant_overlay.conf
 #vendor/etc/wifi/wfdr2_regex.conf
-#vendor/etc/wifi/wpa_supplicant.conf
-#vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
 #system_ext/bin/wfdservice
@@ -2513,7 +2514,7 @@ vendor/bin/cnss-daemon
 #vendor/bin/com_fastbootd
 #vendor/bin/cplay
 #vendor/bin/debug-diag
-#vendor/bin/diag-router
+vendor/bin/diag-router
 #vendor/bin/diag_callback_sample
 #vendor/bin/diag_dci_sample
 #vendor/bin/diag_klog
@@ -2560,8 +2561,8 @@ vendor/bin/cnss-daemon
 #vendor/bin/msm_irqbalance
 #vendor/bin/myftm
 #vendor/bin/pktlogconf
-#vendor/bin/pm-proxy
-#vendor/bin/pm-service
+vendor/bin/pm-proxy
+vendor/bin/pm-service
 #vendor/bin/pmic_key_reset
 #vendor/bin/poweroffcontrol
 #vendor/bin/ppd
@@ -3155,7 +3156,7 @@ vendor/lib64/libllvm-qgl.so
 #vendor/lib64/liblocation_client_api.so
 #vendor/lib64/liblocation_integration_api.so
 #vendor/lib64/liblocdiagiface.so
-#vendor/lib64/liblowi_wifihal.so
+vendor/lib64/liblowi_wifihal.so
 #vendor/lib64/liblqe.so
 #vendor/lib64/libmapdata_api.so
 #vendor/lib64/libmasc.so
