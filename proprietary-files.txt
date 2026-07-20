@@ -17,13 +17,13 @@
 #vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 
 # ADSP
-#vendor/bin/adsprpcd
-#vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
+vendor/bin/adsprpcd
+vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
 #vendor/lib/libadsp_default_listener.so
 #vendor/lib/libadsprpc.so
 vendor/lib/libvmmem.so
-#vendor/lib64/libadsp_default_listener.so
-#vendor/lib64/libadsprpc.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
 vendor/lib64/libvmmem.so
 
 # ADSP modules
@@ -38,8 +38,8 @@ vendor/lib64/libvmmem.so
 #vendor/lib/rfsa/adsp/libmctfengine_skel.so
 #vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 #vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-#vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so
-#vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
+vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so
+vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 
 # Alarm
 #system_ext/lib/vendor.qti.hardware.alarm@1.0.so
@@ -2243,31 +2243,31 @@ vendor/etc/sensors/sns_reg_config
 #vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Thermal
-#vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
-#vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
-#vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
+vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
+vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
+vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
 
 # Thermal (Qualcomm)
 #system_ext/lib/vendor.qti.hardware.limits@1.0.so
 #system_ext/lib/vendor.qti.hardware.limits@1.1.so
 #system_ext/lib64/vendor.qti.hardware.limits@1.0.so
 #system_ext/lib64/vendor.qti.hardware.limits@1.1.so
-#vendor/bin/hw/vendor.qti.hardware.limits@1.2-service
-#vendor/etc/init/vendor.qti.hardware.limits-service.rc
-#vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml
+vendor/bin/hw/vendor.qti.hardware.limits@1.2-service
+vendor/etc/init/vendor.qti.hardware.limits-service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml
 #vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
-#vendor/lib64/vendor.qti.hardware.limits@1.0.so
-#vendor/lib64/vendor.qti.hardware.limits@1.1.so
-#vendor/lib64/vendor.qti.hardware.limits@1.2.so
+vendor/lib64/vendor.qti.hardware.limits@1.0.so
+vendor/lib64/vendor.qti.hardware.limits@1.1.so
+vendor/lib64/vendor.qti.hardware.limits@1.2.so
 
 # Thermal configs
-#vendor/etc/thermal-engine-fogona-camera.conf
-#vendor/etc/thermal-engine-fogona-game-normal.conf
-#vendor/etc/thermal-engine-fogona-game-perf.conf
-#vendor/etc/thermal-engine-fogona-perf.conf
-#vendor/etc/thermal-engine-fogona.conf
-#vendor/etc/thermal-engine.conf
+vendor/etc/thermal-engine-fogona-camera.conf
+vendor/etc/thermal-engine-fogona-game-normal.conf
+vendor/etc/thermal-engine-fogona-game-perf.conf
+vendor/etc/thermal-engine-fogona-perf.conf
+vendor/etc/thermal-engine-fogona.conf
+vendor/etc/thermal-engine.conf
 
 # Time services
 #vendor/app/TimeService/TimeService.apk
@@ -2682,8 +2682,8 @@ vendor/etc/init/imsdaemon.rc
 vendor/etc/init/vendor.qti.diag_userdebug.rc
 #vendor/etc/init/vendor.qti.hardware.lights.service.rc
 #vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-#vendor/etc/init/vendor.sensors.qti.rc
-#vendor/etc/init/vendor.sensors.sscrpcd.rc
+vendor/etc/init/vendor.sensors.qti.rc
+vendor/etc/init/vendor.sensors.sscrpcd.rc
 #vendor/etc/init/vendor.trustonic.alps.alps_device@1.1-service.rc
 #vendor/etc/init/vndservicemanager.rc
 #vendor/etc/lm/prekill/prekill_2GB.data
