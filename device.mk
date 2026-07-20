@@ -1,5 +1,8 @@
 LOCAL_PATH := device/motorola/fogona
 
+#Gapps
+include vendor/gapps/arm64/arm64-vendor.mk
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 BOARD_USES_FULL_RECOVERY_IMAGE := true
