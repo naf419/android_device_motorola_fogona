@@ -1,5 +1,7 @@
 # Unpinned blobs from fogona_g-user 14 U1TFS34M.100-35-14-1-16 8aa5c release-keys
 
+# vendor/bin/lowi-server <-- depends on libwpa_client, an Android.mk target
+
 # ACDB
 #vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb
 #vendor/etc/acdbdata/bengal_idp/IDP_workspaceFileXml.qwsp
@@ -1227,14 +1229,14 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 #vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 
 # GNSS
-#vendor/bin/hw/android.hardware.gnss-aidl-service-qti
-#vendor/bin/loc_launcher
-#vendor/bin/lowi-server
-#vendor/bin/xtra-daemon
-#vendor/bin/xtwifi-client
-#vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
-#vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
-#vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
+vendor/bin/hw/android.hardware.gnss-aidl-service-qti
+vendor/bin/loc_launcher
+vendor/bin/lowi-server;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/bin/xtra-daemon
+vendor/bin/xtwifi-client
+vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
+vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
+vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 #vendor/lib/libdataitems.so
 #vendor/lib/libgdtap.so
 #vendor/lib/libgps.utils.so
@@ -1259,38 +1261,39 @@ vendor/lib/libperipheral_client.so
 #vendor/lib/libxtadapter.so
 #vendor/lib/vendor.qti.gnss-V5-ndk.so
 #vendor/lib/vendor.qti.gnss-service.so
-#vendor/lib64/libdataitems.so
-#vendor/lib64/libgdtap.so
+vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
+vendor/lib64/libdataitems.so
+vendor/lib64/libgdtap.so
 vendor/lib64/libgps.utils.so
-#vendor/lib64/libizat_client_api.so
-#vendor/lib64/libizat_core.so
-#vendor/lib64/liblbs_core.so
-#vendor/lib64/libloc_api_v02.so
+vendor/lib64/libizat_client_api.so
+vendor/lib64/libizat_core.so
+vendor/lib64/liblbs_core.so
+vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_base_util.so
-#vendor/lib64/libloc_core.so
+vendor/lib64/libloc_core.so
 vendor/lib64/libloc_mq_client.so
-#vendor/lib64/libloc_util.so
-#vendor/lib64/liblocation_api.so
-#vendor/lib64/liblocationservice.so
-#vendor/lib64/liblocationservice_glue.so
+vendor/lib64/libloc_util.so
+vendor/lib64/liblocation_api.so
+vendor/lib64/liblocationservice.so
+vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_common.so
-#vendor/lib64/libpal_net_if.so
+vendor/lib64/libpal_net_if.so
 vendor/lib64/libperipheral_client.so
-#vendor/lib64/libqcc_file_agent.so
-#vendor/lib64/libqcc_sdk.so
-#vendor/lib64/libsys_info_cache.so
-#vendor/lib64/libxtadapter.so
-#vendor/lib64/vendor.qti.gnss-V5-ndk.so
-#vendor/lib64/vendor.qti.gnss-service.so
+vendor/lib64/libqcc_file_agent.so
+vendor/lib64/libqcc_sdk.so
+vendor/lib64/libsys_info_cache.so
+vendor/lib64/libxtadapter.so
+vendor/lib64/vendor.qti.gnss-V5-ndk.so
+vendor/lib64/vendor.qti.gnss-service.so
 
 # GNSS configs
-#vendor/etc/apdr.conf
-#vendor/etc/gps.conf
-#vendor/etc/izat.conf
+vendor/etc/apdr.conf
+vendor/etc/gps.conf
+vendor/etc/izat.conf
 vendor/etc/lowi.conf
-#vendor/etc/sap.conf
-#vendor/etc/xtwifi.conf
+vendor/etc/sap.conf
+vendor/etc/xtwifi.conf
 
 # Health
 #lib64/motorola.hardware.health.storage@1.0.so
@@ -1532,7 +1535,7 @@ vendor/lib64/libqti-util.so
 #vendor/lib64/hw/power.default.so
 
 # QCC
-#system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
+system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
 #system_ext/lib/libqcc_file_agent_sys.so
 #system_ext/lib/vendor.qti.hardware.qccsyshal@1.0.so
 #system_ext/lib/vendor.qti.hardware.qccsyshal@1.1.so
@@ -1547,19 +1550,19 @@ vendor/lib64/libqti-util.so
 #system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so
 #system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 #system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
-#vendor/bin/qcc-vendor
+vendor/bin/qcc-vendor
 #vendor/lib/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
 #vendor/lib/vendor.qti.hardware.qccsyshal@1.0.so
 #vendor/lib/vendor.qti.hardware.qccsyshal@1.1.so
 #vendor/lib/vendor.qti.hardware.qccsyshal@1.2.so
 #vendor/lib/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 #vendor/lib/vendor.qti.hardware.qccvndhal@1.0.so
-#vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
-#vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-#vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
-#vendor/lib64/vendor.qti.hardware.qccsyshal@1.2.so
-#vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
-#vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.2.so
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
 # QESD
 #system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml
@@ -2718,11 +2721,11 @@ vendor/etc/init/vendor.qti.diag_userdebug.rc
 #vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 #vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 #vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
-#vendor/etc/seccomp_policy/gnss@2.0-base.policy
-#vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
-#vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
-#vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
-#vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
+vendor/etc/seccomp_policy/gnss@2.0-base.policy
+vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
+vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
+vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
+vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 #vendor/etc/seccomp_policy/qms.policy
 #vendor/etc/seccomp_policy/qsap_qapeservice.policy
@@ -2765,7 +2768,7 @@ vendor/etc/vintf/manifest/qtiradio-saidl.xml
 #vendor/etc/fstab.qcom
 #vendor/etc/fstab.qcom.zram
 #vendor/etc/fstab.qcom.zramwb
-#vendor/etc/gnss_antenna_info.conf
+vendor/etc/gnss_antenna_info.conf
 #vendor/etc/gpfspath_oem_config.xml
 #vendor/etc/init.qti.fm.sh
 #vendor/etc/microphone_characteristics.xml
@@ -3121,9 +3124,9 @@ vendor/lib64/libdrmtime.so
 #vendor/lib64/libfmpal.so
 #vendor/lib64/libfp_ext_svc2.so
 #vendor/lib64/libfptcmd.so
-#vendor/lib64/libgeofencing.so
-#vendor/lib64/libgnss.so
-#vendor/lib64/libgnsspps.so
+vendor/lib64/libgeofencing.so
+vendor/lib64/libgnss.so
+vendor/lib64/libgnsspps.so
 vendor/lib64/libgpt.so
 #vendor/lib64/libgpudataproducer.so
 #vendor/lib64/libhdcp1prov.so

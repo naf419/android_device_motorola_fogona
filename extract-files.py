@@ -26,6 +26,7 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
     'hardware/qcom-caf/sm8250-5.15',
     'hardware/qcom-caf/wlan',
+    'external/wpa_supplicant_8'
 ]
 
 lib_fixups: lib_fixups_user_type = {
