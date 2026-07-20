@@ -87,6 +87,9 @@ BOARD_KERNEL_CMDLINE := \
     firmware_class.path=/vendor/firmware_mnt/image \
     mem.enable_mglru=1
 
+#Audio
+TARGET_USES_QCOM_MM_AUDIO := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := \
     $(LOCAL_PATH)/config.fs

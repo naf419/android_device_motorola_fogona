@@ -21,6 +21,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service
 
+$(call soong_config_set,android_hardware_audio,run_64bit,true)
+
 # Prebuilt kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 PRODUCT_COPY_FILES += \
