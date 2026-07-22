@@ -36,11 +36,20 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     (
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
-        'vendor/lib64/libqtikeymint.so'
+        'vendor/lib64/libqtikeymint.so',
     ): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
-    'vendor/lib64/libmotext_inf.so': blob_fixup()
+    (
+        'vendor/lib64/libmotext_inf.so'
+    ): blob_fixup()
         .remove_needed('libril.so'),
+    (
+        'vendor/lib64/libcodec2_soft_ac4dec.so',
+        'vendor/lib64/libcodec2_soft_ddpdec.so',
+    ): blob_fixup()
+        .replace_needed('libcodec2_soft_common.so', 'libcodec2_soft_common-v31.so')
+        .replace_needed('libsfplugin_ccodec_utils.so', 'libsfplugin_ccodec_utils-v31.so'),
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(
