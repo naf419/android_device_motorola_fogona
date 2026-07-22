@@ -2321,23 +2321,23 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 #lib/motorola.hardware.vibrator@1.0.so
 #lib64/motorola.hardware.vibrator@1.0.so
 #vendor/bin/hw/motorola.hardware.vibrator@1.0-service
-#vendor/bin/hw/vendor.qti.hardware.vibrator.service
+vendor/bin/hw/vendor.qti.hardware.vibrator.service
 #vendor/etc/init/motorola.hardware.vibrator@1.0-service.rc
-#vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
-#vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
+vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
 #vendor/lib/hw/motorola.hardware.vibrator@1.0-impl.so
 #vendor/lib/hw/vibrator.default.so
 #vendor/lib/libsoc_helper.so
 #vendor/lib/motorola.hardware.vibrator@1.0.so
 #vendor/lib64/hw/motorola.hardware.vibrator@1.0-impl.so
-#vendor/lib64/hw/vibrator.default.so
-#vendor/lib64/libaacvibrator.so
-#vendor/lib64/libqtivibratoreffect.so
-#vendor/lib64/libqtivibratoreffectoffload.so
+vendor/lib64/hw/vibrator.default.so
+vendor/lib64/libaacvibrator.so
+vendor/lib64/libqtivibratoreffect.so
+vendor/lib64/libqtivibratoreffectoffload.so
 vendor/lib64/libsoc_helper.so
 #vendor/lib64/motorola.hardware.vibrator@1.0.so
-#vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
-#vendor/lib64/vendor.qti.hardware.vibrator.impl.so
+vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
+vendor/lib64/vendor.qti.hardware.vibrator.impl.so
 
 # Vibrator firmware
 vendor/firmware/aw869x_rtp.bin
