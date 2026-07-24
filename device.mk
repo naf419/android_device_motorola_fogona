@@ -20,11 +20,6 @@ PRODUCT_COPY_FILES += \
 
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
 
-# Prebuilt kernel
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
-PRODUCT_COPY_FILES += \
-	$(TARGET_PREBUILT_KERNEL):kernel
-
 PRODUCT_PLATFORM := qcom
 
 # VINTF
