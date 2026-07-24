@@ -24,7 +24,7 @@ namespace_imports = [
     'device/motorola/fogona',
     'vendor/qcom/opensource/display',
     'vendor/qcom/opensource/dataservices',
-    'hardware/qcom-caf/sm8250-5.15',
+    'hardware/qcom-caf/sm6225-5.15',
     'hardware/qcom-caf/wlan',
     'external/wpa_supplicant_8'
 ]
