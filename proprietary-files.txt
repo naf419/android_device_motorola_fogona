@@ -2510,7 +2510,7 @@ vendor/lib64/qti.video.utils.videobufferlayout.so
 #vendor/bin/aplogcat
 #vendor/bin/aplogd
 #vendor/bin/athdiag
-#vendor/bin/audioadsprpcd
+vendor/bin/audioadsprpcd
 #vendor/bin/audioflacapp
 #vendor/bin/aw882xx_cali
 #vendor/bin/batch
@@ -2686,7 +2686,7 @@ vendor/etc/init/imsdaemon.rc
 #vendor/etc/init/vendor.dpmd.rc
 #vendor/etc/init/vendor.mmi.carrier.rc
 #vendor/etc/init/vendor.qsap.qapeservice.rc
-#vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
+vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 #vendor/etc/init/vendor.qti.battery_stats.rc
 vendor/etc/init/vendor.qti.diag_userdebug.rc
 #vendor/etc/init/vendor.qti.hardware.lights.service.rc
