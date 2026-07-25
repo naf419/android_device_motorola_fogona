@@ -1,7 +1,10 @@
 # Unpinned blobs from fogona_g-user 14 U1TFS34M.100-35-14-1-16 8aa5c release-keys
 
+# disabled checks:
 # vendor/bin/lowi-server <-- depends on libwpa_client, an Android.mk target
 # vendor/lib64/libwfdhdcpservice_proprietary.so <-- depends on libclang_rt.ubsan_standalone-aarch64-android.so
+# vendor/lib64/libqc2audio_hwaudiocodec.so <-- depends on libpalclient, an Android.mk target
+# vendor/lib64/libar-pal.so <-- depends on libagmclient, and Android.mk target
 
 # ACDB
 vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb
@@ -71,8 +74,8 @@ vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 # Audio
 #system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so
 #system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so
-vendor/bin/hw/android.hardware.audio.service_64
-vendor/etc/init/android.hardware.audio.service_64.rc
+#vendor/bin/hw/android.hardware.audio.service_64
+#vendor/etc/init/android.hardware.audio.service_64.rc
 #vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so
 #vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
 #vendor/lib/hw/android.hardware.audio.effect@5.0-impl.so
@@ -112,23 +115,23 @@ vendor/lib/libqmi_encdec.so
 #vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
 #vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
 #vendor/lib/vendor.qti.hardware.pal@1.0.so
-vendor/lib64/hw/android.hardware.audio.effect@2.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@4.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@5.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@6.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so
-vendor/lib64/hw/android.hardware.audio@2.0-impl.so
-vendor/lib64/hw/android.hardware.audio@4.0-impl.so
-vendor/lib64/hw/android.hardware.audio@5.0-impl.so
-vendor/lib64/hw/android.hardware.audio@6.0-impl.so
-vendor/lib64/hw/android.hardware.audio@7.0-impl.so
-vendor/lib64/hw/audio.primary.bengal.so
-vendor/lib64/hw/audio.primary.default.so
-vendor/lib64/hw/audio.r_submix.default.so
-vendor/lib64/hw/audio.usb.bengal.so
-vendor/lib64/hw/audio.usb.default.so
+#vendor/lib64/hw/android.hardware.audio.effect@2.0-impl.so
+#vendor/lib64/hw/android.hardware.audio.effect@4.0-impl.so
+#vendor/lib64/hw/android.hardware.audio.effect@5.0-impl.so
+#vendor/lib64/hw/android.hardware.audio.effect@6.0-impl.so
+#vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so
+#vendor/lib64/hw/android.hardware.audio@2.0-impl.so
+#vendor/lib64/hw/android.hardware.audio@4.0-impl.so
+#vendor/lib64/hw/android.hardware.audio@5.0-impl.so
+#vendor/lib64/hw/android.hardware.audio@6.0-impl.so
+#vendor/lib64/hw/android.hardware.audio@7.0-impl.so
+#vendor/lib64/hw/audio.primary.bengal.so
+#vendor/lib64/hw/audio.primary.default.so
+#vendor/lib64/hw/audio.r_submix.default.so
+#vendor/lib64/hw/audio.usb.bengal.so
+#vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/libagm.so
-vendor/lib64/libagmclient.so
+#vendor/lib64/libagmclient.so
 vendor/lib64/libalsautils.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
@@ -150,9 +153,9 @@ vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libtinycompress.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.pal@1.0.so
+#vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
+#vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+#vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
 # Audio (FX modules)
 #vendor/lib/soundfx/libasphere.so
@@ -171,25 +174,25 @@ vendor/lib64/vendor.qti.hardware.pal@1.0.so
 #vendor/lib/libdlbpreg.so
 #vendor/lib/libsensorndkbridge.so
 #vendor/lib/libvibrator.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libaudiopreprocessing.so
-vendor/lib64/soundfx/libbundlewrapper.so
-# CRASHES vendor/lib64/soundfx/libdlbvol.so
-vendor/lib64/soundfx/libdownmix.so
-vendor/lib64/soundfx/libdynproc.so
-vendor/lib64/soundfx/libeffectproxy.so
+#vendor/lib64/soundfx/libasphere.so
+#vendor/lib64/soundfx/libaudiopreprocessing.so
+#vendor/lib64/soundfx/libbundlewrapper.so
+#vendor/lib64/soundfx/libdlbvol.so
+#vendor/lib64/soundfx/libdownmix.so
+#vendor/lib64/soundfx/libdynproc.so
+#vendor/lib64/soundfx/libeffectproxy.so
 #vendor/lib64/soundfx/libhapticgenerator.so
-vendor/lib64/soundfx/libldnhncr.so
-vendor/lib64/soundfx/libqcompostprocbundle.so
-vendor/lib64/soundfx/libqcomvisualizer.so
-vendor/lib64/soundfx/libqcomvoiceprocessing.so
-vendor/lib64/soundfx/libreverbwrapper.so
-vendor/lib64/soundfx/libshoebox.so
-vendor/lib64/soundfx/libspeakerbundle.so
-vendor/lib64/soundfx/libswdap.so
-vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libvisualizer.so
-vendor/lib64/soundfx/libvolumelistener.so
+#vendor/lib64/soundfx/libldnhncr.so
+#vendor/lib64/soundfx/libqcompostprocbundle.so
+#vendor/lib64/soundfx/libqcomvisualizer.so
+#vendor/lib64/soundfx/libqcomvoiceprocessing.so
+#vendor/lib64/soundfx/libreverbwrapper.so
+#vendor/lib64/soundfx/libshoebox.so
+#vendor/lib64/soundfx/libspeakerbundle.so
+#vendor/lib64/soundfx/libswdap.so
+#vendor/lib64/soundfx/libswgamedap.so
+#vendor/lib64/soundfx/libvisualizer.so
+#vendor/lib64/soundfx/libvolumelistener.so
 vendor/lib64/libdlbpreg.so
 vendor/lib64/libsensorndkbridge.so
 #vendor/lib64/libvibrator.so
@@ -2243,13 +2246,13 @@ vendor/etc/sensors/sns_reg_config
 #vendor/lib/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 #vendor/lib/vendor.qti.hardware.ListenSoundModel@1.0.so
 #vendor/lib/vendor.qti.voiceprint@1.0.so
-vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
-vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
-vendor/lib64/hw/sound_trigger.primary.bengal.so
-vendor/lib64/liblistensoundmodel2vendor.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
-vendor/lib64/vendor.qti.voiceprint@1.0.so
+#vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
+#vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
+#vendor/lib64/hw/sound_trigger.primary.bengal.so
+#vendor/lib64/liblistensoundmodel2vendor.so
+#vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
+#vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
+#vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Thermal
 vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
@@ -3085,10 +3088,10 @@ vendor/lib64/libadm.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadropbox.so
 #vendor/lib64/libadspd.so
-vendor/lib64/libagm_compress_plugin.so
-vendor/lib64/libagm_mixer_plugin.so
-vendor/lib64/libagm_pcm_plugin.so
-vendor/lib64/libagmmixer.so
+#vendor/lib64/libagm_compress_plugin.so
+#vendor/lib64/libagm_mixer_plugin.so
+#vendor/lib64/libagm_pcm_plugin.so
+#vendor/lib64/libagmmixer.so
 #vendor/lib64/libaidenoiser.so
 #vendor/lib64/libalps.so
 #vendor/lib64/libancbase_fd.so
@@ -3097,7 +3100,7 @@ vendor/lib64/libagmmixer.so
 #vendor/lib64/libaualgo_azp_component.so
 #vendor/lib64/libbase64.so
 vendor/lib64/libbatching.so
-vendor/lib64/libbatterylistener.so
+#vendor/lib64/libbatterylistener.so
 #vendor/lib64/libbinderdebug.so
 #vendor/lib64/libboot_control_qti.so
 #vendor/lib64/libbt-hidlclient.so
@@ -3129,7 +3132,7 @@ vendor/lib64/libdrmtime.so
 #vendor/lib64/libembmsservice.so
 #vendor/lib64/libengineplugin.so
 #vendor/lib64/libesesbprovision.so
-vendor/lib64/libfmpal.so
+#vendor/lib64/libfmpal.so
 #vendor/lib64/libfp_ext_svc2.so
 #vendor/lib64/libfptcmd.so
 vendor/lib64/libgeofencing.so
@@ -3141,7 +3144,7 @@ vendor/lib64/libgpt.so
 #vendor/lib64/libhdcp2p2prov.so
 #vendor/lib64/libhdcpsrm.so
 vendor/lib64/libhdr_tm.so
-vendor/lib64/libhfp_pal.so
+#vendor/lib64/libhfp_pal.so
 #vendor/lib64/libipebpsstriping.so
 #vendor/lib64/libiqi_bridge.so
 #vendor/lib64/libjnihelper.so
@@ -3200,8 +3203,8 @@ vendor/lib64/libperfioctl.so
 #vendor/lib64/libpsi.so
 #vendor/lib64/libq3dtools_adreno.so
 #vendor/lib64/libqapesdk.so
-#vendor/lib64/libqc2audio_hwaudiocodec.so
-#vendor/lib64/libqc2audio_swaudiocodec.so
+vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/lib64/libqc2audio_swaudiocodec.so
 #vendor/lib64/libqc2colorconvertfilter.so
 #vendor/lib64/libqc2filter.so
 #vendor/lib64/libqcci_legacy.so
@@ -3253,7 +3256,7 @@ vendor/lib64/libsfplugin_ccodec_utils.so:vendor/lib64/libsfplugin_ccodec_utils-v
 #vendor/lib64/libsilkyscrolls.so
 #vendor/lib64/libskewknob.so
 #vendor/lib64/libsmemlog.so
-vendor/lib64/libsndcardparser.so
+#vendor/lib64/libsndcardparser.so
 #vendor/lib64/libsns_low_lat_stream_stub.so
 #vendor/lib64/libsns_registry_skel.so
 #vendor/lib64/libsoc_helper_jni.so
