@@ -1761,7 +1761,7 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
 #vendor/lib/libqcrilNrQtiMutex.so
 #vendor/lib/libqmi_csi.so
 #vendor/lib/libqmimotext.so
-#vendor/lib/libqsap_sdk.so
+vendor/lib/libqsap_sdk.so
 #vendor/lib/libqsocket.so
 #vendor/lib/libril-db.so
 #vendor/lib/libril-legacy.so
