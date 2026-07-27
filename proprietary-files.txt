@@ -2620,7 +2620,7 @@ vendor/bin/qmi_motext_hook
 #vendor/bin/tcmd_diag_dci
 #vendor/bin/tcmdhelp
 #vendor/bin/test_diag
-#vendor/bin/thermal-engine-v2
+vendor/bin/thermal-engine-v2
 #vendor/bin/tinymix
 #vendor/bin/tinyplay
 #vendor/bin/tloc_daemon
@@ -2680,7 +2680,7 @@ vendor/etc/init/imsdaemon.rc
 #vendor/etc/init/init.qti.media.rc
 #vendor/etc/init/init.qti.qcv.rc
 #vendor/etc/init/init.vendor.sensors.rc
-#vendor/etc/init/init_thermal-engine-v2.rc
+vendor/etc/init/init_thermal-engine-v2.rc
 #vendor/etc/init/loc-launcher.rc
 #vendor/etc/init/memtrack_qti.rc
 #vendor/etc/init/motorola.hardware.fdrcontrol@1.2-service.rc
