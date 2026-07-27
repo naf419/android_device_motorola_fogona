@@ -103,6 +103,9 @@ aaudio.hw_burst_min_usec=2000
 vendor.audio.enable.mirrorlink=false
 vendor.usb.analog_audioacc_disabled=true
 
+# Camera
+persist.vendor.camera.physical.num=2
+
 # Chipset
 ro.soc.manufacturer=QTI
 
