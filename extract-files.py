@@ -15,6 +15,7 @@ from extract_utils.fixups_blob import (
 )
 
 from extract_utils.fixups_lib import (
+    lib_fixups,
     lib_fixup_vendorcompat,
     lib_fixups_user_type,
     libs_proto_3_9_1,
@@ -29,11 +30,24 @@ namespace_imports = [
     'external/wpa_supplicant_8'
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_vendor' if partition in ['odm', 'vendor'] else None
+
 lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
     libs_proto_3_9_1: lib_fixup_vendorcompat,
+    (
+        'vendor.qti.diaghal@1.0',
+        'vendor.qti.imsrtpservice@3.0',
+        'vendor.qti.imsrtpservice@3.1',
+    ): lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/etc/permissions/moto-telephony.xml': blob_fixup()
+        .regex_replace('/system/', '/system_ext/'),
+    'system_ext/priv-app/ims/ims.apk': blob_fixup()
+        .apktool_patch('ims-patches'),
     (
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
         'vendor/lib64/libqtikeymint.so',

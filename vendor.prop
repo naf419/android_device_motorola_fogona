@@ -103,6 +103,9 @@ aaudio.hw_burst_min_usec=2000
 vendor.audio.enable.mirrorlink=false
 vendor.usb.analog_audioacc_disabled=true
 
+# Camera
+persist.vendor.camera.physical.num=2
+
 # Chipset
 ro.soc.manufacturer=QTI
 
@@ -126,6 +129,10 @@ vendor.display.enable_rounded_corner=0
 vendor.display.disable_rounded_corner_thread=0
 vendor.display.enable_rc_support=0
 vendor.display.enable_perf_hint_large_comp_cycle=1
+
++# Fwk-detect
+ro.vendor.qti.va_aosp.support=1
+ro.vendor.qti.va_odm.support=1
 
 # Gatekeeper
 vendor.gatekeeper.is_security_level_spu=0
