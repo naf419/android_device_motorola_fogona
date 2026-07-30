@@ -137,6 +137,9 @@ persist.vendor.dpm.vndr.idletimer.mode=default
 persist.vendor.dpm.vndr.halservice.enable=1
 persist.vendor.dpm.vndr.feature=11
 
+# FM
+vendor.qcom.bluetooth.soc=cherokee
+
 # Fwk-detect
 ro.vendor.qti.va_aosp.support=1
 ro.vendor.qti.va_odm.support=1

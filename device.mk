@@ -137,6 +137,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
         fastbootd
 
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    qcom.fmradio
+
 # Media
 PRODUCT_PACKAGES += \
     libmm-omxcore \
