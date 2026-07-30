@@ -2,6 +2,7 @@
 
 # disabled checks:
 # vendor/bin/lowi-server <-- depends on libwpa_client, an Android.mk target
+# vendor/lib64/libcne.so <-- ditto
 # vendor/lib64/libwfdhdcpservice_proprietary.so <-- depends on libclang_rt.ubsan_standalone-aarch64-android.so
 # vendor/lib64/libqc2audio_hwaudiocodec.so <-- depends on libpalclient, an Android.mk target
 # vendor/lib64/libar-pal.so <-- depends on libagmclient, and Android.mk target
@@ -686,39 +687,39 @@ vendor/etc/charger_fstab.qti
 #system_ext/lib64/vendor.qti.latency@2.2.so
 #system_ext/lib64/vendor.qti.latency@2.3.so
 #vendor/app/CneApp/CneApp.apk
-#vendor/bin/cnd
-#vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
-#vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
-#vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
-#vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
-#vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
-#vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
-#vendor/etc/cne/wqeclient/ATT/ATT_profile7.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
-#vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
-#vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
-#vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
-#vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
-#vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
-#vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
-#vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
-#vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
+vendor/bin/cnd
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile7.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
 #vendor/etc/cne/mwqem.conf
 #vendor/etc/cne/profileMwqem.xml
-#vendor/etc/init/cnd.rc
+vendor/etc/init/cnd.rc
 #vendor/lib/libcne.so
 #vendor/lib/libcneapiclient.so
 #vendor/lib/libdsutils.so
@@ -763,7 +764,7 @@ vendor/lib/libmdmdetect.so
 #vendor/lib/vendor.qti.latency@2.0.so
 #vendor/lib/vendor.qti.latency@2.1.so
 #vendor/lib/vendor.qti.latency@2.2.so
-#vendor/lib64/libcne.so
+vendor/lib64/libcne.so;DISABLE_DEPS;DISABLE_CHECKELF
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
