@@ -1108,9 +1108,13 @@ vendor/firmware/a730_zap.mdt
 #vendor/gpu/kbc/unified_ksqs.bin
 
 # DPM
-#system_ext/bin/dpmd
-#system_ext/etc/dpm/dpm.conf
-#system_ext/etc/init/dpmd.rc
+system_ext/bin/dpmd
+system_ext/etc/dpm/dpm.conf
+system_ext/etc/init/dpmd.rc
+system_ext/etc/permissions/com.qti.dpmframework.xml
+system_ext/etc/permissions/dpmapi.xml
+system_ext/framework/com.qti.dpmframework.jar
+system_ext/framework/dpmapi.jar
 #system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so
 #system_ext/lib/libdiag_system.so
 #system_ext/lib/libdpmframework.so
@@ -1118,16 +1122,16 @@ vendor/firmware/a730_zap.mdt
 #system_ext/lib/vendor.qti.hardware.dpmaidlservice-V1-ndk.so
 #system_ext/lib/vendor.qti.hardware.dpmservice@1.0.so
 #system_ext/lib/vendor.qti.hardware.dpmservice@1.1.so
-#system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
 system_ext/lib64/libdiag_system.so
-#system_ext/lib64/libdpmframework.so
+system_ext/lib64/libdpmframework.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 #system_ext/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so
 #system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
 #system_ext/lib64/vendor.qti.hardware.dpmservice@1.1.so
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
-#vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 #vendor/lib/libdpmqmihal.so
 #vendor/lib/libqmi_client_helper.so
 #vendor/lib/libqmi_client_qmux.so

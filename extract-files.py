@@ -37,6 +37,7 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     libs_proto_3_9_1: lib_fixup_vendorcompat,
     (
+        'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.imsrtpservice@3.1',
