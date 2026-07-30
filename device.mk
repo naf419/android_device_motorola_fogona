@@ -245,6 +245,7 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.mmi.touch.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.touch.sh \
         $(LOCAL_PATH)/init/init.mmi.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.usb.rc \
         $(LOCAL_PATH)/init/init.mmi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mmi.usb.sh \
+        $(LOCAL_PATH)/init/init.oem.fingerprint2.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.oem.fingerprint2.sh \
         $(LOCAL_PATH)/init/init.oem.hw.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.oem.hw.sh \
         $(LOCAL_PATH)/init/init.qcom.class_core.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.class_core.sh \
         $(LOCAL_PATH)/init/init.qcom.early_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.early_boot.sh \

@@ -1209,14 +1209,17 @@ vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Fingerprint
-#vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone
-#vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
-#vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-chipone2.rc
-#vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-chipone2.rc
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
+vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml
 #vendor/lib/com.motorola.hardware.biometric.fingerprint@1.0.so
 #vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+#vendor/lib/hw/chipone.fingerprint.default.so
 #vendor/lib64/com.motorola.hardware.biometric.fingerprint@1.0.so
-#vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/hw/chipone.fingerprint.default.so
 
 # FM
 #system_ext/lib/vendor.qti.hardware.fm@1.0.so
@@ -2882,7 +2885,6 @@ vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v_unsigned.mbn
 vendor/firmware/wigig.ini
 #vendor/framework/com.fingerprints.extension.jar
-#vendor/lib/hw/chipone.fingerprint.default.so
 #vendor/lib/btaudio_offload_if.so
 #vendor/lib/com.qti.chiusecaseselector.so
 #vendor/lib/ftm_fm_lib.so
@@ -3065,7 +3067,6 @@ vendor/lib/libllvm-qgl.so
 #vendor/lib/vendor.libdpmframework.so
 #vendor/lib/vendor.libdpmtcm.so
 #vendor/lib/vendor.libmwqemiptablemgr.so
-#vendor/lib64/hw/chipone.fingerprint.default.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/com.qti.chiusecaseselector.so
 #vendor/lib64/deviceInfoServiceModuleNr.so
@@ -3304,9 +3305,9 @@ vendor/lib64/qcril_client.so
 #vendor/lib64/vendor.trustonic.alps.alps_device@1.0.so
 #vendor/lib64/vendor.trustonic.alps.alps_device@1.1.so
 #vendor/odm/etc/vintf/manifest_b.xml
-#vendor/usr/idc/uinput-fpc.idc
-#vendor/usr/idc/uinput-fpsensor.idc
-#vendor/usr/keylayout/ReadyForAirRemote_Consumer_Control.kl
-#vendor/usr/keylayout/ReadyForAirRemote_Keyboard.kl
-#vendor/usr/keylayout/uinput-fpc.kl
-#vendor/usr/keylayout/uinput-fpsensor.kl
+vendor/usr/idc/uinput-fpc.idc
+vendor/usr/idc/uinput-fpsensor.idc
+vendor/usr/keylayout/ReadyForAirRemote_Consumer_Control.kl
+vendor/usr/keylayout/ReadyForAirRemote_Keyboard.kl
+vendor/usr/keylayout/uinput-fpc.kl
+vendor/usr/keylayout/uinput-fpsensor.kl
