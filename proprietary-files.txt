@@ -580,6 +580,12 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 
+# Charger
+vendor/bin/hvdcp_opti
+vendor/bin/init.qti.chg_policy.sh
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
+vendor/etc/charger_fstab.qti
+
 # CNE
 #lib/vendor.qti.hardware.data.connectionaidl-V1-ndk.so
 #lib64/vendor.qti.hardware.data.connectionaidl-V1-ndk.so
