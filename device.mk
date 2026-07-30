@@ -105,6 +105,11 @@ AB_OTA_PARTITIONS := \
   system_dlkm \
   vendor_dlkm
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service_64
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
