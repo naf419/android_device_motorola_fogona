@@ -105,7 +105,7 @@ vendor.usb.analog_audioacc_disabled=true
 
 # Camera
 persist.vendor.camera.physical.num=2
-# TODO remove (this is a cam api1 prop): camera.disable_zsl_mode=1
+camera.disable_zsl_mode=1
 
 # Chipset
 ro.soc.manufacturer=QTI
