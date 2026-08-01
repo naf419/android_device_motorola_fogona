@@ -104,8 +104,10 @@ vendor.audio.enable.mirrorlink=false
 vendor.usb.analog_audioacc_disabled=true
 
 # Camera
-persist.vendor.camera.physical.num=2
 camera.disable_zsl_mode=1
+persist.vendor.camera.expose.aux=1
+persist.vendor.camera.physical.num=2
+ro.vendor.camera.noiseVibratortime=180
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -130,6 +132,11 @@ vendor.display.enable_rounded_corner=0
 vendor.display.disable_rounded_corner_thread=0
 vendor.display.enable_rc_support=0
 vendor.display.enable_perf_hint_large_comp_cycle=1
+vendor.display.enable_camera_smooth=1
+vendor.display.camera_noc_efficiency_factor=0.70
+vendor.display.disable_inline_rotator=1
+debug.sf.disable_hwc_vds=1
+vendor.display.disable_rotator_ubwc=1
 
 # DPM
 persist.vendor.dpm.feature=1

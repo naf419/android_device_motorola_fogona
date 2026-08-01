@@ -3175,7 +3175,7 @@ vendor/lib64/libhdr_tm.so
 #vendor/lib64/libipebpsstriping.so
 #vendor/lib64/libiqi_bridge.so
 #vendor/lib64/libjnihelper.so
-#vendor/lib64/libjpege.so
+vendor/lib64/libjpege.so
 #vendor/lib64/libkcl.so
 #vendor/lib64/libkernelmanager.so
 #vendor/lib64/libkeymasterprovision.so
