@@ -301,6 +301,10 @@ vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 vendor/bin/hw/motorola.hardware.camera.imgtuner@2.0-service
 vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc:vendor/etc/init/android.hardware.camera.provider@2.4-service_64-qti.rc
 vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc
+vendor/etc/permissions/android.hardware.camera.flash-autofocus.xml
+vendor/etc/permissions/android.hardware.camera.front.xml
+vendor/etc/permissions/android.hardware.camera.full.xml
+vendor/etc/permissions/android.hardware.camera.raw.xml
 #vendor/lib/camera/components/com.bst.node.hdrdetect.so
 #vendor/lib/camera/components/com.bst.node.mfnr.so
 #vendor/lib/camera/components/com.bst.node.yuvhdr.so
@@ -1498,6 +1502,10 @@ vendor/etc/media_profiles_vendor.xml
 # NFC configs
 #etc/libnfc-nci.conf
 
+# OEM
+vendor/bin/motobox;SYMLINK=vendor/bin/expat
+vendor/etc/vhw.xml
+
 # PASR
 vendor/bin/hw/vendor.qti.memory.pasrmanager@1.0-service
 vendor/etc/init/vendor.qti.memory.pasrmanager@1.0-service.rc
@@ -2576,7 +2584,6 @@ vendor/bin/diag-router
 #vendor/bin/edgnss-daemon
 #vendor/bin/embmsslServer
 #vendor/bin/engine-service
-#vendor/bin/expat
 #vendor/bin/fdrcontrol
 #vendor/bin/fmconfig
 #vendor/bin/fmfactorytest
@@ -2602,7 +2609,6 @@ vendor/bin/imsdaemon
 #vendor/bin/memtest_mode
 #vendor/bin/mlid
 #vendor/bin/mot_tcmd
-#vendor/bin/motobox
 #vendor/bin/myftm
 #vendor/bin/pktlogconf
 vendor/bin/pm-proxy
@@ -2822,7 +2828,6 @@ vendor/etc/resourcemanager_bengal_qrd_arrax.xml
 #vendor/etc/ueventd.rc
 vendor/etc/usecaseKvManager.xml
 vendor/etc/usecaseKvManager_arrax.xml
-#vendor/etc/vhw.xml
 vendor/firmware/FT8006U_Pramboot.bin
 vendor/firmware/ILITEK_FW_TXD_9883C
 vendor/firmware/NT36xxx_MP_Setting_Criteria_606D.csv

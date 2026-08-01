@@ -102,7 +102,8 @@ $(call soong_config_set,android_hardware_audio,run_64bit,true)
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := \
-    $(LOCAL_PATH)/config.fs
+    $(LOCAL_PATH)/config.fs \
+    $(LOCAL_PATH)/mot_aids.fs
 
 # Fstab
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/init/fstab.recovery
