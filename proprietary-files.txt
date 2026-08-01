@@ -417,6 +417,7 @@ vendor/lib/libOpenCL.so
 #vendor/lib/libdisplayconfig.qti.so
 #vendor/lib/libgralloc.qti.so
 #vendor/lib/libhdr_impl.so
+#vendor/lib/libmctfengine_stub.so
 #vendor/lib/libmmcamera_cac3.so
 #vendor/lib/libmmcamera_lscv35.so
 #vendor/lib/libmmcamera_mfnr.so
@@ -546,6 +547,7 @@ vendor/lib64/libcom.qti.chinodeutils.so
 #vendor/lib64/libdisplayconfig.qti.so
 #vendor/lib64/libgralloc.qti.so
 vendor/lib64/libhdr_impl.so
+vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmmcamera_cac3.so
 vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
@@ -2995,7 +2997,6 @@ vendor/lib/libllvm-qgl.so
 #vendor/lib/libmapdata_api.so
 #vendor/lib/libmasc.so
 #vendor/lib/libmcs.so
-#vendor/lib/libmctfengine_stub.so
 #vendor/lib/libmdsprpc.so
 #vendor/lib/libmm-omxcore.so
 #vendor/lib/libnative-api.so
@@ -3202,7 +3203,6 @@ vendor/lib64/liblowi_wifihal.so
 #vendor/lib64/libmapdata_api.so
 #vendor/lib64/libmasc.so
 vendor/lib64/libmcs.so
-#vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libmemperfd.so
 #vendor/lib64/libmeters-ns.so
