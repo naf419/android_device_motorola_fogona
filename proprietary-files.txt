@@ -225,6 +225,12 @@ vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/libqti_vndfwk_detect_vendor.so
 #vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+#vendor/lib/lib_bt_aptx.so
+#vendor/lib/lib_bt_ble.so
+#vendor/lib/lib_bt_bundle.so
+vendor/lib64/lib_bt_aptx.so
+vendor/lib64/lib_bt_ble.so
+vendor/lib64/lib_bt_bundle.so
 
 # Bluetooth (A2DP)
 #lib/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
@@ -2923,9 +2929,6 @@ vendor/lib/libCB.so
 #vendor/lib/libSecureUILib.so
 #vendor/lib/libStDrvInt.so
 #vendor/lib/libTxPwrJni.so
-#vendor/lib/lib_bt_aptx.so
-#vendor/lib/lib_bt_ble.so
-#vendor/lib/lib_bt_bundle.so
 #vendor/lib/libadm.so
 vendor/lib/libadreno_app_profiles.so
 #vendor/lib/libadspd.so
@@ -3107,9 +3110,6 @@ vendor/lib64/libGPreqcancel.so
 vendor/lib64/libStDrvInt.so
 #vendor/lib64/libTxPwrJni.so
 #vendor/lib64/lib_android_keymaster_keymint_utils.so
-#vendor/lib64/lib_bt_aptx.so
-#vendor/lib64/lib_bt_ble.so
-#vendor/lib64/lib_bt_bundle.so
 #vendor/lib64/lib_modemapi_qc_hidl.so
 #vendor/lib64/libadaptlaunch.so
 vendor/lib64/libadm.so
