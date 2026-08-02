@@ -1407,6 +1407,33 @@ vendor/lib64/libqtikeymaster4.so
 #vendor/lib/hw/local_time.default.so
 #vendor/lib64/hw/local_time.default.so
 
+# Machine learning
+vendor/etc/lm/prekill/prekill_2GB.data
+vendor/etc/lm/prekill/prekill_4GB.data
+vendor/etc/lm/prekill/prekill_6GB.data
+vendor/etc/lm/AdaptLaunchFeature.xml
+vendor/etc/lm/AppClassifierFeature.xml
+vendor/etc/lm/LightningLaunchesFeature.xml
+vendor/etc/lm/PreKillFeature.xml
+vendor/etc/lm/PrefAppsFeature.xml
+vendor/etc/lm/ProCompFeature.xml
+vendor/etc/lm/QAPE.xml
+vendor/etc/lm/QGPE.xml
+vendor/etc/lm/QGPEActionMap.xml
+vendor/etc/lm/SilkyScrollsFeature.xml
+vendor/lib64/libadaptlaunch.so
+vendor/lib64/libapengine.so
+vendor/lib64/libappclassifier.so
+vendor/lib64/liblightninglaunches.so
+vendor/lib64/liblmthermallistner.so
+vendor/lib64/liblmutils-ns.so
+vendor/lib64/libmeters-ns.so
+vendor/lib64/libprefapps.so
+vendor/lib64/libprekill.so
+vendor/lib64/libprocomp.so
+vendor/lib64/libqapesdk.so
+vendor/lib64/libsilkyscrolls.so
+
 # Media
 #etc/seccomp_policy/mediacodec.policy
 #lib/libmedia_codeclist.so
@@ -2738,19 +2765,6 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 #vendor/etc/init/vendor.trustonic.alps.alps_device@1.1-service.rc
 #vendor/etc/init/vndservicemanager.rc
-vendor/etc/lm/prekill/prekill_2GB.data
-vendor/etc/lm/prekill/prekill_4GB.data
-vendor/etc/lm/prekill/prekill_6GB.data
-vendor/etc/lm/AdaptLaunchFeature.xml
-vendor/etc/lm/AppClassifierFeature.xml
-vendor/etc/lm/LightningLaunchesFeature.xml
-vendor/etc/lm/PreKillFeature.xml
-vendor/etc/lm/PrefAppsFeature.xml
-vendor/etc/lm/ProCompFeature.xml
-vendor/etc/lm/QAPE.xml
-vendor/etc/lm/QGPE.xml
-vendor/etc/lm/QGPEActionMap.xml
-vendor/etc/lm/SilkyScrollsFeature.xml
 vendor/etc/media_khaje_iot/video_system_specs.json
 vendor/etc/media_khaje_v0/video_system_specs.json
 #vendor/etc/motorola/12m/2kHz_Mono_1s.wav
@@ -3111,7 +3125,6 @@ vendor/lib64/libStDrvInt.so
 #vendor/lib64/libTxPwrJni.so
 #vendor/lib64/lib_android_keymaster_keymint_utils.so
 #vendor/lib64/lib_modemapi_qc_hidl.so
-#vendor/lib64/libadaptlaunch.so
 vendor/lib64/libadm.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadropbox.so
@@ -3123,8 +3136,6 @@ vendor/lib64/libadropbox.so
 #vendor/lib64/libaidenoiser.so
 #vendor/lib64/libalps.so
 vendor/lib64/libancbase_fd.so
-#vendor/lib64/libapengine.so
-#vendor/lib64/libappclassifier.so
 #vendor/lib64/libaualgo_azp_component.so
 #vendor/lib64/libbase64.so
 vendor/lib64/libbatching.so
@@ -3182,11 +3193,8 @@ vendor/lib64/libjpege.so
 #vendor/lib64/libkeymasterprovision.so
 #vendor/lib64/libkeymint.so
 vendor/lib64/liblearningmodule.so
-#vendor/lib64/liblightninglaunches.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libllvm-qgl.so
-#vendor/lib64/liblmthermallistner.so
-#vendor/lib64/liblmutils-ns.so
 #vendor/lib64/libloadalgo_stub.so
 #vendor/lib64/libloadtrusteduiapp.so
 vendor/lib64/libloc_api_wds.so
@@ -3205,7 +3213,6 @@ vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libmcs.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libmemperfd.so
-#vendor/lib64/libmeters-ns.so
 vendor/lib64/libmeters.so
 #vendor/lib64/libmm-omxcore.so
 #vendor/lib64/libnative-api.so
@@ -3224,12 +3231,8 @@ vendor/lib64/libperfioctl.so
 #vendor/lib64/libpkip.so
 #vendor/lib64/libpolygon.so
 #vendor/lib64/libportrait_repair_ppl3_ocl.so
-#vendor/lib64/libprefapps.so
-#vendor/lib64/libprekill.so
-#vendor/lib64/libprocomp.so
 #vendor/lib64/libpsi.so
 #vendor/lib64/libq3dtools_adreno.so
-#vendor/lib64/libqapesdk.so
 vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_DEPS;DISABLE_CHECKELF
 vendor/lib64/libqc2audio_swaudiocodec.so
 #vendor/lib64/libqc2colorconvertfilter.so
@@ -3280,7 +3283,6 @@ vendor/lib64/libsdsprpc.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsfplugin_ccodec_utils.so:vendor/lib64/libsfplugin_ccodec_utils-v31.so;FIX_SONAME
-#vendor/lib64/libsilkyscrolls.so
 #vendor/lib64/libskewknob.so
 #vendor/lib64/libsmemlog.so
 #vendor/lib64/libsndcardparser.so
