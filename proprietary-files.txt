@@ -1,11 +1,12 @@
 # Unpinned blobs from fogona_g-user 14 U1TFS34M.100-35-14-1-16 8aa5c release-keys
 
-# disabled checks:
+# disabled dependency checks:
 # vendor/bin/lowi-server <-- depends on libwpa_client, an Android.mk target
-# vendor/lib64/libcne.so <-- ditto
+# vendor/lib64/libcne.so <-- depends on libwpa_client, an Android.mk target
 # vendor/lib64/libwfdhdcpservice_proprietary.so <-- depends on libclang_rt.ubsan_standalone-aarch64-android.so
 # vendor/lib64/libqc2audio_hwaudiocodec.so <-- depends on libpalclient, an Android.mk target
-# vendor/lib64/libar-pal.so <-- depends on libagmclient, and Android.mk target
+# vendor/lib64/libqtigefar.so <-- depends on libar-pal, an Android.mk target
+# vendor/lib64/libmcs.so <-- depends on libagm, an Android.mk target
 
 # ACDB
 vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb
@@ -131,21 +132,21 @@ vendor/lib/libqmi_encdec.so
 #vendor/lib64/hw/audio.r_submix.default.so
 #vendor/lib64/hw/audio.usb.bengal.so
 #vendor/lib64/hw/audio.usb.default.so
-vendor/lib64/libagm.so
+#vendor/lib64/libagm.so
 #vendor/lib64/libagmclient.so
 #vendor/lib64/libalsautils.so
-vendor/lib64/libar-acdb.so
-vendor/lib64/libar-gpr.so
-vendor/lib64/libar-gsl.so
-vendor/lib64/libar-pal.so;DISABLE_DEPS;DISABLE_CHECKELF
-vendor/lib64/libats.so
+#vendor/lib64/libar-acdb.so
+#vendor/lib64/libar-gpr.so
+#vendor/lib64/libar-gsl.so
+#vendor/lib64/libar-pal.so
+#vendor/lib64/libats.so
 vendor/lib64/libaualgo_azp_wrapper.so
 vendor/lib64/libaualgo_foundation.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libdiag.so
 vendor/lib64/libjson.so
-vendor/lib64/liblx-ar_util.so
-vendor/lib64/liblx-osal.so
+#vendor/lib64/liblx-ar_util.so
+#vendor/lib64/liblx-osal.so
 #vendor/lib64/libmediautils_vendor.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
@@ -153,7 +154,7 @@ vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libtinycompress.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+#vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 #vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 #vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 #vendor/lib64/vendor.qti.hardware.pal@1.0.so
@@ -228,9 +229,9 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 #vendor/lib/lib_bt_aptx.so
 #vendor/lib/lib_bt_ble.so
 #vendor/lib/lib_bt_bundle.so
-vendor/lib64/lib_bt_aptx.so
-vendor/lib64/lib_bt_ble.so
-vendor/lib64/lib_bt_bundle.so
+#vendor/lib64/lib_bt_aptx.so
+#vendor/lib64/lib_bt_ble.so
+#vendor/lib64/lib_bt_bundle.so
 
 # Bluetooth (A2DP)
 #lib/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
@@ -770,7 +771,7 @@ vendor/lib/libmdmdetect.so
 #vendor/lib/vendor.qti.latency@2.0.so
 #vendor/lib/vendor.qti.latency@2.1.so
 #vendor/lib/vendor.qti.latency@2.2.so
-vendor/lib64/libcne.so;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/lib64/libcne.so;DISABLE_DEPS
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
@@ -1270,7 +1271,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GNSS
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loc_launcher
-vendor/bin/lowi-server;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/bin/lowi-server;DISABLE_DEPS
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
@@ -2534,7 +2535,7 @@ vendor/lib64/libwfdcommonutils_proprietary.so
 #vendor/lib64/libwfdconfigutils_proprietary.so
 vendor/lib64/libwfddisplayconfig_vendor.so
 vendor/lib64/libwfdhdcpcp.so
-vendor/lib64/libwfdhdcpservice_proprietary.so;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/lib64/libwfdhdcpservice_proprietary.so;DISABLE_DEPS
 #vendor/lib64/libwfdmminterface_proprietary.so
 #vendor/lib64/libwfdmmservice_proprietary.so
 #vendor/lib64/libwfdmmsrc_proprietary.so
@@ -3204,7 +3205,7 @@ vendor/lib64/liblowi_wifihal.so
 #vendor/lib64/liblqe.so
 #vendor/lib64/libmapdata_api.so
 #vendor/lib64/libmasc.so
-vendor/lib64/libmcs.so
+vendor/lib64/libmcs.so;DISABLE_DEPS
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libmemperfd.so
 vendor/lib64/libmeters.so
@@ -3227,7 +3228,7 @@ vendor/lib64/libperfioctl.so
 #vendor/lib64/libportrait_repair_ppl3_ocl.so
 #vendor/lib64/libpsi.so
 #vendor/lib64/libq3dtools_adreno.so
-vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_DEPS
 vendor/lib64/libqc2audio_swaudiocodec.so
 #vendor/lib64/libqc2colorconvertfilter.so
 #vendor/lib64/libqc2filter.so
@@ -3264,7 +3265,7 @@ vendor/lib64/libqseed3.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-qesdk-secure.so
 #vendor/lib64/libqti-utils.so
-vendor/lib64/libqtigefar.so
+vendor/lib64/libqtigefar.so;DISABLE_DEPS
 #vendor/lib64/librcmask.so
 #vendor/lib64/librecovery_updater.so
 #vendor/lib64/librecovery_updater_msm.so

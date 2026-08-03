@@ -42,11 +42,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libaudiopreprocessing \
+    libagm \
     libagmclient \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
     libagmmixer \
+    libar-pal \
     libbatterylistener \
     libbundlewrapper \
     libdownmix \
@@ -64,6 +66,11 @@ PRODUCT_PACKAGES += \
     libvisualizer \
     libvolumelistener \
     libdynproc
+
+PRODUCT_PACKAGES += \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle
 
 # Prebuilt kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
