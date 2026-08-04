@@ -67,8 +67,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcodec2_soft_common.so', 'libcodec2_soft_common-v31.so')
         .replace_needed('libsfplugin_ccodec_utils.so', 'libsfplugin_ccodec_utils-v31.so'),
     'vendor/lib64/libcne.so' : blob_fixup()
-        .replace_needed('android.hardware.wifi.supplicant-V1-ndk.so', 'android.hardware.wifi.supplicant-V3-ndk.so')
-        .replace_needed('android.hardware.wifi.hostapd-V1-ndk.so', 'android.hardware.wifi.hostapd-V2-ndk.so'),
+        .replace_needed('android.hardware.wifi.supplicant-V1-ndk.so', 'android.hardware.wifi.supplicant-V4-ndk.so')
+        .replace_needed('android.hardware.wifi.hostapd-V1-ndk.so', 'android.hardware.wifi.hostapd-V3-ndk.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
     'vendor/lib64/sensors.moto.so': blob_fixup()
