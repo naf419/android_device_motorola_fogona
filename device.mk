@@ -171,6 +171,13 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Partitions
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint \
+    vendor_fsg_mountpoint
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -245,6 +252,11 @@ PRODUCT_PACKAGES += \
     libpower.vendor \
     libsensorndkbridge
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/motorola
+
 # System init
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc \
@@ -281,17 +293,6 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
         $(LOCAL_PATH)/init/fstab.qcom.zram:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom.zram
 
-#TODO: make these dirs correctly
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/firmware_mnt/dummy \
-        $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/bt_firmware/dummy \
-        $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/fsg/dummy \
-        $(LOCAL_PATH)/init/dummy:$(TARGET_COPY_OUT_VENDOR)/dsp/dummy
-
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
 
 # Telephony
 PRODUCT_PACKAGES += \

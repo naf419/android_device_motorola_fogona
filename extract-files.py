@@ -27,6 +27,7 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
     'hardware/qcom-caf/sm6225-5.15',
     'hardware/qcom-caf/wlan',
+    'hardware/motorola',
     'external/wpa_supplicant_8'
 ]
 
@@ -68,6 +69,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libcne.so' : blob_fixup()
         .replace_needed('android.hardware.wifi.supplicant-V1-ndk.so', 'android.hardware.wifi.supplicant-V3-ndk.so')
         .replace_needed('android.hardware.wifi.hostapd-V1-ndk.so', 'android.hardware.wifi.hostapd-V2-ndk.so'),
+    'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
+        .add_needed('libhidlbase_shim.so'),
+    'vendor/lib64/sensors.moto.so': blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
