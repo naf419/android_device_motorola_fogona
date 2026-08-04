@@ -121,6 +121,12 @@ ODM_MANIFEST_B_FILES := $(LOCAL_PATH)/sku/manifest_b.xml
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 
 # SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+#include hardware/motorola/sepolicy/qti/SEPolicy.mk
+#BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
+#PRODUCT_PRIVATE_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/private
+#PRODUCT_PUBLIC_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/public
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 # Recovery
