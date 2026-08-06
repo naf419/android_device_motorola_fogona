@@ -393,7 +393,7 @@ load_driver_modules()
 	if [ "$supplier" ]; then
 		if [ -f $oem_panel_script ]; then
 			debug "load_driver_modules()"
-			$oem_panel_script -d -s $supplier
+			$oem_panel_script -s $supplier
 		fi
 	fi
 }

@@ -37,9 +37,11 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     libs_proto_3_9_1: lib_fixup_vendorcompat,
     (
+        'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.imsrtpservice@3.1',
+        'vendor.qti.hardware.fm@1.0'
     ): lib_fixup_vendor_suffix,
 }
 
@@ -63,7 +65,9 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libcodec2_soft_common.so', 'libcodec2_soft_common-v31.so')
         .replace_needed('libsfplugin_ccodec_utils.so', 'libsfplugin_ccodec_utils-v31.so'),
-
+    'vendor/lib64/libcne.so' : blob_fixup()
+        .replace_needed('android.hardware.wifi.supplicant-V1-ndk.so', 'android.hardware.wifi.supplicant-V3-ndk.so')
+        .replace_needed('android.hardware.wifi.hostapd-V1-ndk.so', 'android.hardware.wifi.hostapd-V2-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -147,6 +147,7 @@ AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := false
 AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
 AUDIO_FEATURE_ENABLED_PAL_HIDL := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
+AUDIO_FEATURE_ENABLED_EC_REF_CAPTURE := true
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
@@ -154,7 +155,8 @@ $(call soong_config_set,android_hardware_audio,run_64bit,true)
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := \
-    $(LOCAL_PATH)/config.fs
+    $(LOCAL_PATH)/config.fs \
+    $(LOCAL_PATH)/mot_aids.fs
 
 # Fstab
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/init/fstab.recovery
@@ -171,6 +173,12 @@ ODM_MANIFEST_B_FILES := $(LOCAL_PATH)/sku/manifest_b.xml
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 
 # SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+#include hardware/motorola/sepolicy/qti/SEPolicy.mk
+#BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
+#PRODUCT_PRIVATE_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/private
+#PRODUCT_PUBLIC_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/public
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 # Recovery
