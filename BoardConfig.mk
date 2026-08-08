@@ -57,13 +57,13 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 
-TARGET_KERNEL_CONFIG := gki_defconfig vendor/bengal_GKI.config vendor/ext_config/moto-bengal.config vendor/ext_config/moto-bengal-fogona.config
-TARGET_KERNEL_SOURCE := kernel/motorola/sm6225-5.15
+TARGET_KERNEL_CONFIG := gki_defconfig vendor/bengal_GKI.config vendor/ext_config/moto-bengal.config vendor/ext_config/moto-bengal-fogona.config vendor/ext_config/fogona-modules.config
+TARGET_KERNEL_SOURCE := kernel/motorola/sm8550
 BOARD_KERNEL_IMAGE_NAME := Image
 KERNEL_LTO := thin
 
 # Kernel modules
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/motorola/sm6225-5.15-modules
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/motorola/sm8550-modules
 
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
@@ -95,38 +95,55 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/securemsm-kernel \
     qcom/opensource/display-drivers/msm \
-    qcom/opensource/eva-kernel \
     qcom/opensource/video-driver \
     qcom/opensource/graphics-kernel \
-    qcom/opensource/wlan/platform \
-    qcom/opensource/wlan/qcacld-3.0/.kiwi_v2 \
     qcom/opensource/bt-kernel \
+    qcom/opensource/wlan/platform \
+    qcom/opensource/wlan/qcacld-3.0/.wlan \
     nxp/opensource/driver \
+    motorola/drivers/input/misc/chipone_fps_mmi_v1 \
+    motorola/drivers/input/misc/fpc_fps_mmi \
+    motorola/drivers/input/misc/qpnp_power_on_mmi \
+    motorola/drivers/input/touchscreen/chipone_tddi_v2_mmi \
+    motorola/drivers/input/touchscreen/touchscreen_mmi \
+    motorola/drivers/input/touchscreen/ilitek_v3_mmi \
+    motorola/drivers/input/touchscreen/nova_0flash_mmi \
+    motorola/drivers/input/misc/goodix_fod_mmi \
     motorola/drivers/mmi_annotate \
     motorola/drivers/mmi_info \
+    motorola/drivers/mmi_relay \
+    motorola/drivers/power/bq2589x_chg_mmi \
+    motorola/drivers/power/cw2217b_fg_mmi \
     motorola/drivers/power/bm_adsp_ulog \
     motorola/drivers/power/mmi_charger \
     motorola/drivers/power/qti_glink_charger \
     motorola/drivers/power/qpnp_adaptive_charge \
+    motorola/drivers/power/rt9426a_fg_mmi \
     motorola/drivers/misc/utag \
-    motorola/drivers/mmi_relay \
-    motorola/drivers/power/mmi_lpd_mitigate \
+    motorola/drivers/moto_f_usbnet \
+    motorola/drivers/moto_mm \
+    motorola/drivers/moto_mmap_fault \
+    motorola/drivers/moto_sched \
+    motorola/drivers/moto_swap \
+    motorola/drivers/misc/aw9610x \
     motorola/drivers/misc/mmi_sys_temp \
+    motorola/drivers/misc/ldo_vibrator_mmi \
+    motorola/drivers/misc/sx937x_multi \
+    motorola/drivers/misc/sx933x \
+    motorola/drivers/misc/tps61280a \
+    motorola/drivers/nfc/st21nfc \
+    motorola/drivers/power/mmi_discrete_charger \
+    motorola/drivers/power/mmi_lpd_mitigate \
+    motorola/drivers/power/sgm4154x_chg_mmi \
+    motorola/drivers/power/sm5602_fg_mmi \
     motorola/drivers/power/wakeup_sources \
     motorola/drivers/regulator/wl2868c \
     motorola/drivers/sensors \
-    motorola/drivers/misc/sx937x_multi \
-    motorola/drivers/input/touchscreen/touchscreen_mmi \
-    motorola/drivers/input/touchscreen/goodix_berlin_mmi \
-    motorola/drivers/input/misc/goodix_fod_mmi
+    motorola/drivers/usb/typec/adapter_class \
+    motorola/drivers/usb/typec/mmi_tcpc \
+    motorola/drivers/watchdogtest
 
-# Kernel Modules - Vendor Boot
 BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules/vendor_ramdisk/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules/vendor_dlkm/,$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules)
 
 BOARD_USES_SYSTEM_DLKMIMAGE := true
 BOARD_USES_VENDOR_DLKMIMAGE := true
