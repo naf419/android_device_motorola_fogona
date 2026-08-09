@@ -287,8 +287,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Boot
 vendor/bin/hw/android.hardware.boot@1.2-service
-vendor/etc/init/android.hardware.boot@1.2-service.rc
-vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
+#vendor/etc/init/android.hardware.boot@1.2-service.rc
+#vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 
 # Camera
 #lib/motorola.hardware.camera.imgtuner@1.0.so
@@ -2325,8 +2325,8 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal
 vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
-vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
-vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
+#vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
+#vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
 
 # Thermal (Qualcomm)
 #system_ext/lib/vendor.qti.hardware.limits@1.0.so
@@ -2395,8 +2395,8 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 #vendor/bin/hw/motorola.hardware.vibrator@1.0-service
 vendor/bin/hw/vendor.qti.hardware.vibrator.service
 #vendor/etc/init/motorola.hardware.vibrator@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
+#vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
+#vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
 #vendor/lib/hw/motorola.hardware.vibrator@1.0-impl.so
 #vendor/lib/hw/vibrator.default.so
 #vendor/lib/libsoc_helper.so
@@ -2751,7 +2751,7 @@ vendor/etc/init/init_thermal-engine-v2.rc
 #vendor/etc/init/tloc_daemon.rc
 #vendor/etc/init/vendor.mmi.carrier.rc
 #vendor/etc/init/vendor.qsap.qapeservice.rc
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
+#vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 #vendor/etc/init/vendor.qti.battery_stats.rc
 vendor/etc/init/vendor.qti.diag_userdebug.rc
 #vendor/etc/init/vendor.qti.hardware.lights.service.rc
