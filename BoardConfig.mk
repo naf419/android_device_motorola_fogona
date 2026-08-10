@@ -143,8 +143,6 @@ TARGET_KERNEL_EXT_MODULES := \
     motorola/drivers/usb/typec/mmi_tcpc \
     motorola/drivers/watchdogtest
 
-BUILD_BROKEN_DUP_RULES := true
-
 BOARD_USES_SYSTEM_DLKMIMAGE := true
 BOARD_USES_VENDOR_DLKMIMAGE := true
 

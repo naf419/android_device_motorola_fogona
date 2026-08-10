@@ -13,6 +13,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    audioadsprpcd \
     audio.bluetooth.default \
     audio.primary.bengal \
     audio.r_submix.default \
@@ -71,6 +72,10 @@ PRODUCT_PACKAGES += \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle
+
+# Boot Control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-service
 
 PRODUCT_PLATFORM := qcom
 
@@ -301,9 +306,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti-v2
+
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
 
 # Wifi
 PRODUCT_PACKAGES += \
