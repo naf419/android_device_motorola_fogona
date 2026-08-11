@@ -1,0 +1,1 @@
+allow mediacodec vendor_sysfs_sndcard:file { read write open };
