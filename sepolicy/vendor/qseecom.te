@@ -1,0 +1,3 @@
+allow tee qseecom_0000_device:chr_file { open read write ioctl };
+
+allowxperm tee qseecom_0000_device:chr_file ioctl { SG_IO };
