@@ -1,4 +1,5 @@
-/dev/0:0:0:0	u:object_r:qseecom_0000_device:s0
+/dev/0:0:0:[0-5]  u:object_r:vendor_dev_tee:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/fsg_[ab]          u:object_r:vendor_modem_efs_partition_device:s0
 
 /vendor/firmware_mnt(/.*)?                  u:object_r:firmware_file:s0
 

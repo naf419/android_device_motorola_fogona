@@ -1,1 +1,1 @@
-type qseecom_0000_device, dev_type;
+type vendor_dev_tee, dev_type;
