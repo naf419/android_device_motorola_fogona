@@ -17,3 +17,5 @@ allow motorola_hardware_biometrics_fingerprint init:unix_stream_socket connectto
 allow motorola_hardware_biometrics_fingerprint property_socket:sock_file write;
 allow motorola_hardware_biometrics_fingerprint vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
 allow motorola_hardware_biometrics_fingerprint vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };
+
+add_hwservice(motorola_hardware_biometrics_fingerprint, motorola_hardware_biometrics_fingerprint_hwservice)
