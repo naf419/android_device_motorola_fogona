@@ -1,0 +1,35 @@
+type agmipc, domain;
+type agmipc_exec, exec_type, vendor_file_type, file_type;
+
+hal_server_domain(agmipc, hal_audio)
+init_daemon_domain(agmipc)
+
+# Bidirectional Binder communication between hal_audio_default and agmipc
+allow hal_audio_default agmipc:binder { call transfer };
+allow agmipc hal_audio_default:binder { call transfer };
+
+# Generic Sound and Audio Controls
+allow agmipc proc_asound:dir search;
+allow agmipc proc_asound:dir r_dir_perms;
+allow agmipc proc_asound:file r_file_perms;
+
+# Qualcomm Vendor Audio Directories and System Files
+allow agmipc vendor_proc_audiod:dir r_dir_perms;
+allow agmipc vendor_proc_audiod:file r_file_perms;
+allow agmipc vendor_sysfs_sndcard:file rw_file_perms;
+allow agmipc vendor_audio_data_file:dir search;
+
+# Qualcomm AGM Character Devices and IOCTL Permissions
+allow agmipc vendor_agm_device:chr_file rw_file_perms;
+allow agmipc vendor_dmabuf_system_uncached_heap_device:chr_file rw_file_perms;
+
+# IOCTL System Calls (Extended Permissions)
+allowxperm agmipc vendor_dmabuf_system_uncached_heap_device:chr_file ioctl { DMA_HEAP_IOCTL_ALLOC };
+allowxperm agmipc vendor_agm_device:chr_file ioctl { 0x6161 };
+
+# System Properties Access
+get_prop(agmipc, vendor_audio_prop)
+get_prop(agmipc, hwservicemanager_prop)
+
+# Process Capabilities (Audio Thread Scheduling Priority)
+allow agmipc self:capability sys_nice;
