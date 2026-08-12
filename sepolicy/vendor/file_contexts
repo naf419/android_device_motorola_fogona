@@ -16,7 +16,7 @@
 /vendor/bin/hw/motorola\.hardware\.camera\.imgtuner@2\.0-service 		u:object_r:motorola_hardware_camera_imgtuner_exec:s0
 /vendor/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service           		u:object_r:vendor_dolby_camera_dms_exec:s0
 /vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service               		u:object_r:mediacodec_exec:s0
-/vendor/bin/hw/vendor\.qti\.hardware\.AGMIPC@1\.0-service          		u:object_r:agmipc_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.AGMIPC@1\.0-service          		u:object_r:hal_audio_default_exec:s0
 
 /vendor/bin/init\.mmi\.modules\.sh      u:object_r:vendor_qti_init_shell_exec:s0
 /vendor/bin/init\.mmi\.display\.sh      u:object_r:vendor_qti_init_shell_exec:s0
