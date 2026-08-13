@@ -1,0 +1,10 @@
+type motorola_hardware_camera_imgtuner, domain;
+type motorola_hardware_camera_imgtuner_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(motorola_hardware_camera_imgtuner)
+
+hwbinder_use(motorola_hardware_camera_imgtuner)
+
+hal_server_domain(motorola_hardware_camera_imgtuner, hal_camera)
+
+add_hwservice(motorola_hardware_camera_imgtuner, motorola_hardware_camera_imgtuner_hwservice)

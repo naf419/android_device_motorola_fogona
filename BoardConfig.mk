@@ -57,6 +57,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 
+TARGET_KERNEL_VERSION := 5.15
 TARGET_KERNEL_CONFIG := gki_defconfig vendor/bengal_GKI.config vendor/ext_config/moto-bengal.config vendor/ext_config/moto-bengal-fogona.config vendor/ext_config/fogona-modules.config
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8550
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -74,7 +75,7 @@ BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
-BOOT_KERNEL_MODULES := $(strip $(shell $(LOCAL_PATH)/modules.load.vendor_boot))
+BOOT_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
 SYSTEM_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load.system_dlkm))
 
 TARGET_KERNEL_EXT_MODULES := \
@@ -191,10 +192,10 @@ TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 #include hardware/motorola/sepolicy/qti/SEPolicy.mk
-#BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
-#PRODUCT_PRIVATE_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/private
-#PRODUCT_PUBLIC_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/public
-BOARD_BOOTCONFIG += androidboot.selinux=permissive
+BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/public
+#BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
