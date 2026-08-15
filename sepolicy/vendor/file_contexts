@@ -1,5 +1,4 @@
 /dev/0:0:0:[0-5]  u:object_r:vendor_dev_tee:s0
-/dev/block/platform/soc/4804000\.ufshc/by-name/fsg_[ab]          u:object_r:vendor_modem_efs_partition_device:s0
 
 /vendor/firmware_mnt(/.*)?                  u:object_r:firmware_file:s0
 
@@ -23,9 +22,3 @@
 /vendor/bin/init\.mmi\.modules\.sh      u:object_r:vendor_qti_init_shell_exec:s0
 /vendor/bin/init\.mmi\.display\.sh      u:object_r:vendor_qti_init_shell_exec:s0
 /vendor/bin/init\.mmi\.usb\.sh          u:object_r:vendor_qti_init_shell_exec:s0
-/vendor/bin/init\.mmi\.boot\.sh         u:object_r:vendor_qti_init_shell_exec:s0
-/vendor/bin/init\.mmi\.touch\.sh        u:object_r:vendor_qti_init_shell_exec:s0
-/vendor/bin/init\.mmi\.laser\.sh        u:object_r:vendor_qti_init_shell_exec:s0
-/vendor/bin/init\.oem\.hw\.sh           u:object_r:vendor_qti_init_shell_exec:s0
-/vendor/bin/init\.oem\.fingerprint2\.sh u:object_r:vendor_qti_init_shell_exec:s0
-
