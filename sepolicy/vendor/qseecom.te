@@ -1,0 +1,3 @@
+allow tee vendor_dev_tee:chr_file { open read write ioctl };
+
+allowxperm tee vendor_dev_tee:chr_file ioctl { SG_IO };

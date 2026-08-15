@@ -1,0 +1,31 @@
+/dev/0:0:0:[0-5]  u:object_r:vendor_dev_tee:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/fsg_[ab]          u:object_r:vendor_modem_efs_partition_device:s0
+
+/vendor/firmware_mnt(/.*)?                  u:object_r:firmware_file:s0
+
+/sys/devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery(/.*)?						u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery(/.*)?/wakeup(.*)?					u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/4ac0000\.qcom,qupv3_0_geni_se/4a84000\.i2c/i2c-0/0-006a/power_supply(/.*)?			u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4ac0000\.qcom,qupv3_0_geni_se/4a84000\.i2c/i2c-0/0-006a/power_supply(/.*)?/wakeup(.*)?	u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/4ac0000\.qcom,qupv3_0_geni_se/4a88000\.i2c/i2c-1/1-0064/power_supply(/.*)?			u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4ac0000\.qcom,qupv3_0_geni_se/4a88000\.i2c/i2c-1/1-0064/power_supply(/.*)?/wakeup(.*)?	u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:mmi,discrete-charging/power_supply(/.*)?							u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/soc:mmi,discrete-charging/power_supply(/.*)?/wakeup(.*)?					u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:ldo_vib/leds/vibrator(/.*)?								u:object_r:sysfs_leds:s0
+
+
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc 	u:object_r:motorola_hardware_biometrics_fingerprint_exec:s0
+/vendor/bin/hw/motorola\.hardware\.camera\.imgtuner@2\.0-service 		u:object_r:motorola_hardware_camera_imgtuner_exec:s0
+/vendor/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service           		u:object_r:vendor_dolby_camera_dms_exec:s0
+/vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service               		u:object_r:mediacodec_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.AGMIPC@1\.0-service          		u:object_r:hal_audio_default_exec:s0
+
+/vendor/bin/init\.mmi\.modules\.sh      u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init\.mmi\.display\.sh      u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init\.mmi\.usb\.sh          u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init\.mmi\.boot\.sh         u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init\.mmi\.touch\.sh        u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init\.mmi\.laser\.sh        u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init\.oem\.hw\.sh           u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init\.oem\.fingerprint2\.sh u:object_r:vendor_qti_init_shell_exec:s0
+

@@ -1,0 +1,21 @@
+type motorola_hardware_biometrics_fingerprint, domain;
+hal_server_domain(motorola_hardware_biometrics_fingerprint, hal_fingerprint)
+
+type motorola_hardware_biometrics_fingerprint_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(motorola_hardware_biometrics_fingerprint)
+
+allow motorola_hardware_biometrics_fingerprint input_device:chr_file r_file_perms;
+allow motorola_hardware_biometrics_fingerprint tee_device:chr_file rw_file_perms;
+
+r_dir_file(motorola_hardware_biometrics_fingerprint, firmware_file)
+r_dir_file(motorola_hardware_biometrics_fingerprint, vendor_data_file)
+
+hwbinder_use(motorola_hardware_biometrics_fingerprint)
+
+allow motorola_hardware_biometrics_fingerprint build_bootimage_prop:file { getattr map open read };
+allow motorola_hardware_biometrics_fingerprint init:unix_stream_socket connectto;
+allow motorola_hardware_biometrics_fingerprint property_socket:sock_file write;
+allow motorola_hardware_biometrics_fingerprint vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
+allow motorola_hardware_biometrics_fingerprint vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };
+
+add_hwservice(motorola_hardware_biometrics_fingerprint, motorola_hardware_biometrics_fingerprint_hwservice)
