@@ -1,3 +1,2 @@
 type motorola_hardware_camera_imgtuner_hwservice, hwservice_manager_type;
 type vendor_dolby_camera_dms_hwservice, hwservice_manager_type;
-type motorola_hardware_biometrics_fingerprint_hwservice, hwservice_manager_type;
