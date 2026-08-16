@@ -28,7 +28,6 @@ namespace_imports = [
     'hardware/qcom-caf/sm6225-5.15',
     'hardware/qcom-caf/wlan',
     'hardware/motorola',
-    'external/wpa_supplicant_8'
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
@@ -67,7 +66,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcodec2_soft_common.so', 'libcodec2_soft_common-v31.so')
         .replace_needed('libsfplugin_ccodec_utils.so', 'libsfplugin_ccodec_utils-v31.so'),
     'vendor/lib64/libcne.so' : blob_fixup()
-        .replace_needed('android.hardware.wifi.supplicant-V1-ndk.so', 'android.hardware.wifi.supplicant-V4-ndk.so')
+        .replace_needed('android.hardware.wifi.supplicant-V1-ndk.so', 'android.hardware.wifi.supplicant-V5-ndk.so')
         .replace_needed('android.hardware.wifi.hostapd-V1-ndk.so', 'android.hardware.wifi.hostapd-V3-ndk.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),

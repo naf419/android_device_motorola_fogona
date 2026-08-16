@@ -153,7 +153,7 @@ vendor/lib64/libpdnotifier.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_encdec.so
-vendor/lib64/libtinycompress.so
+#vendor/lib64/libtinycompress.so
 #vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 #vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 #vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
