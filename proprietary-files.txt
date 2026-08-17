@@ -1,13 +1,5 @@
 # Unpinned blobs from fogona_g-user 14 U1TFS34M.100-35-14-1-16 8aa5c release-keys
 
-# disabled dependency checks:
-# vendor/bin/lowi-server <-- depends on libwpa_client, an Android.mk target
-# vendor/lib64/libcne.so <-- depends on libwpa_client, an Android.mk target
-# vendor/lib64/libwfdhdcpservice_proprietary.so <-- depends on libclang_rt.ubsan_standalone-aarch64-android.so
-# vendor/lib64/libqc2audio_hwaudiocodec.so <-- depends on libpalclient, an Android.mk target
-# vendor/lib64/libqtigefar.so <-- depends on libar-pal, an Android.mk target
-# vendor/lib64/libmcs.so <-- depends on libagm, an Android.mk target
-
 # ACDB
 vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb
 vendor/etc/acdbdata/bengal_idp/IDP_workspaceFileXml.qwsp
@@ -771,7 +763,7 @@ vendor/lib/libmdmdetect.so
 #vendor/lib/vendor.qti.latency@2.0.so
 #vendor/lib/vendor.qti.latency@2.1.so
 #vendor/lib/vendor.qti.latency@2.2.so
-vendor/lib64/libcne.so;DISABLE_DEPS
+vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
@@ -1271,7 +1263,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GNSS
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loc_launcher
-vendor/bin/lowi-server;DISABLE_DEPS
+vendor/bin/lowi-server
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
@@ -2535,7 +2527,7 @@ vendor/lib64/libwfdcommonutils_proprietary.so
 #vendor/lib64/libwfdconfigutils_proprietary.so
 vendor/lib64/libwfddisplayconfig_vendor.so
 vendor/lib64/libwfdhdcpcp.so
-vendor/lib64/libwfdhdcpservice_proprietary.so;DISABLE_DEPS
+vendor/lib64/libwfdhdcpservice_proprietary.so
 #vendor/lib64/libwfdmminterface_proprietary.so
 #vendor/lib64/libwfdmmservice_proprietary.so
 #vendor/lib64/libwfdmmsrc_proprietary.so
@@ -3205,7 +3197,7 @@ vendor/lib64/liblowi_wifihal.so
 #vendor/lib64/liblqe.so
 #vendor/lib64/libmapdata_api.so
 #vendor/lib64/libmasc.so
-vendor/lib64/libmcs.so;DISABLE_DEPS
+vendor/lib64/libmcs.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libmemperfd.so
 vendor/lib64/libmeters.so
@@ -3228,7 +3220,7 @@ vendor/lib64/libperfioctl.so
 #vendor/lib64/libportrait_repair_ppl3_ocl.so
 #vendor/lib64/libpsi.so
 #vendor/lib64/libq3dtools_adreno.so
-vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_DEPS
+vendor/lib64/libqc2audio_hwaudiocodec.so
 vendor/lib64/libqc2audio_swaudiocodec.so
 #vendor/lib64/libqc2colorconvertfilter.so
 #vendor/lib64/libqc2filter.so
@@ -3265,7 +3257,7 @@ vendor/lib64/libqseed3.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-qesdk-secure.so
 #vendor/lib64/libqti-utils.so
-vendor/lib64/libqtigefar.so;DISABLE_DEPS
+vendor/lib64/libqtigefar.so
 #vendor/lib64/librcmask.so
 #vendor/lib64/librecovery_updater.so
 #vendor/lib64/librecovery_updater_msm.so
