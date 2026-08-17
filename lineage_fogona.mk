@@ -16,8 +16,3 @@ PRODUCT_DEVICE := fogona
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g play (2024)
 PRODUCT_MANUFACTURER := motorola
-
-$(call inherit-product, device/motorola/fogona/device.mk)
-
-PRODUCT_PACKAGES += \
-    Launcher3QuickStep
