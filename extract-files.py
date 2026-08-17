@@ -72,7 +72,10 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libhidlbase_shim.so'),
     'vendor/lib64/sensors.moto.so': blob_fixup()
         .add_needed('libbase_shim.so'),
-    'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
+    (
+        'vendor/etc/seccomp_policy/atfwd@2.0.policy',
+        'vendor/etc/seccomp_policy/wfdhdcphalservice.policy'
+    ): blob_fixup()
         .add_line_if_missing('gettid: 1'),
 }  # fmt: skip
 
