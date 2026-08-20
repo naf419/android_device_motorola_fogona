@@ -184,6 +184,9 @@ vendor.gatekeeper.is_security_level_spu=0
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# RIL
+ro.telephony.default_network=9,9
+
 # SurfaceFlinger
 qemu.hw.mainkeys=0
 ro.surface_flinger.has_HDR_display=false

@@ -2804,7 +2804,7 @@ vendor/etc/seccomp_policy/qti-systemd.policy
 #vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
 #vendor/etc/vintf/manifest/memtrack_qti.xml
 #vendor/etc/vintf/manifest/motorola.hardware.power.service.xml
-#vendor/etc/vintf/manifest/power.xml
+vendor/etc/vintf/manifest/power.xml
 vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/qtiradio-saidl.xml
