@@ -74,7 +74,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.lo
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load $(LOCAL_PATH)/modules.load.vendor_boot))
 SYSTEM_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load.system_dlkm))
 
