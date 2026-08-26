@@ -84,7 +84,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mm-drivers/msm_ext_display \
     qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/audio-kernel \
-    qcom/opensource/camera-kernel \
+    qcom/opensource/camera-kernel-fogona \
     qcom/opensource/dataipa/drivers/platform/msm \
     qcom/opensource/datarmnet/core \
     qcom/opensource/datarmnet-ext/aps \
@@ -95,12 +95,12 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/datarmnet-ext/sch \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/securemsm-kernel \
-    qcom/opensource/display-drivers/msm \
+    qcom/opensource/display-drivers-fogona/msm \
     qcom/opensource/video-driver \
     qcom/opensource/graphics-kernel \
     qcom/opensource/bt-kernel \
-    qcom/opensource/wlan/platform \
-    qcom/opensource/wlan/qcacld-3.0 \
+    qcom/opensource/wlan-fogona/platform \
+    qcom/opensource/wlan-fogona/qcacld-3.0 \
     nxp/opensource/driver \
     motorola/drivers/input/misc/chipone_fps_mmi_v1 \
     motorola/drivers/input/misc/fpc_fps_mmi \
