@@ -100,7 +100,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/graphics-kernel \
     qcom/opensource/bt-kernel \
     qcom/opensource/wlan/platform \
-    qcom/opensource/wlan/qcacld-3.0/.wlan \
+    qcom/opensource/wlan/qcacld-3.0 \
     nxp/opensource/driver \
     motorola/drivers/input/misc/chipone_fps_mmi_v1 \
     motorola/drivers/input/misc/fpc_fps_mmi \
