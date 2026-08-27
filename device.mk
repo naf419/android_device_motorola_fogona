@@ -7,10 +7,6 @@ include vendor/gapps/arm64/arm64-vendor.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery
-
 # Audio
 PRODUCT_PACKAGES += \
     audioadsprpcd \
@@ -74,7 +70,9 @@ PRODUCT_PACKAGES += \
 
 # Boot Control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-service
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery \
+    bootctl
 
 PRODUCT_PLATFORM := qcom
 
