@@ -1598,7 +1598,7 @@ vendor/lib64/libqti-util.so
 # Power
 vendor/bin/hw/android.hardware.power-service
 vendor/etc/init/android.hardware.power-service.rc
-vendor/etc/vintf/manifest/power.xml
+vendor/etc/vintf/manifest/power.xml:vendor/etc/vintf/manifest/power_manifest.xml
 #vendor/lib/hw/power.default.so
 vendor/lib64/hw/power.default.so
 
