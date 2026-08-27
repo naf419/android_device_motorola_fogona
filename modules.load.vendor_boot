@@ -20,6 +20,8 @@ qcom_ipc_logging.ko
 qcom-cpufreq-hw.ko
 clk-dummy.ko
 clk-qcom.ko
+lpassaoncc-khaje.ko
+lpassaudiocc-khaje.ko
 cqhci.ko
 dcc_v2.ko
 debug-regulator.ko

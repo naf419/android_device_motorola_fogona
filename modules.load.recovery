@@ -20,6 +20,8 @@ qcom_ipc_logging
 qcom-cpufreq-hw
 clk-dummy
 clk-qcom
+lpassaoncc-khaje
+lpassaudiocc-khaje
 cqhci
 dcc_v2
 debug-regulator
