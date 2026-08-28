@@ -69,14 +69,12 @@ TARGET_KERNEL_EXT_MODULE_ROOT := kernel/motorola/sm8550-modules
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
-BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.system_dlkm))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load))
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load $(LOCAL_PATH)/modules.load.vendor_boot))
-SYSTEM_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load.system_dlkm))
 
 TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mmrm-driver \
