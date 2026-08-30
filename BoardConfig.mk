@@ -94,7 +94,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/securemsm-kernel \
     qcom/opensource/display-drivers-fogona/msm \
-    qcom/opensource/video-driver \
+    qcom/opensource/video-driver-fogona \
     qcom/opensource/graphics-kernel \
     qcom/opensource/bt-kernel \
     qcom/opensource/wlan-fogona/platform \
