@@ -70,6 +70,7 @@ vendor/etc/audio_effects.xml
 vendor/etc/audio_effects.xml
 vendor/etc/audio_ext_spkr.conf
 vendor/etc/audio_policy_volumes.xml
+vendor/etc/backend_conf.xml
 vendor/etc/bluetooth_qti_audio_policy_configuration.xml
 vendor/etc/card-defs.xml
 vendor/etc/default_volume_tables.xml
