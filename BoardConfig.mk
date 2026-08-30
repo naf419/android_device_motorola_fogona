@@ -81,7 +81,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mm-drivers/hw_fence \
     qcom/opensource/mm-drivers/msm_ext_display \
     qcom/opensource/mm-drivers/sync_fence \
-    qcom/opensource/audio-kernel \
+    qcom/opensource/audio-kernel-fogona \
     qcom/opensource/camera-kernel-fogona \
     qcom/opensource/dataipa/drivers/platform/msm \
     qcom/opensource/datarmnet/core \
