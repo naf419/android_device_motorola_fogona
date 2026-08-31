@@ -61,6 +61,7 @@ TARGET_KERNEL_VERSION := 5.15
 TARGET_KERNEL_CONFIG := gki_defconfig vendor/bengal_GKI.config vendor/ext_config/moto-bengal.config vendor/ext_config/moto-bengal-fogona.config
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8550
 BOARD_KERNEL_IMAGE_NAME := Image
+KERNEL_LTO := thin
 
 # Kernel modules
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/motorola/sm8550-modules
