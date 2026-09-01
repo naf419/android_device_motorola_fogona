@@ -679,6 +679,40 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
+# Init
+vendor/etc/init/hw/init.mmi.charge_only.rc
+vendor/etc/init/hw/init.mmi.chipset.rc
+vendor/etc/init/hw/init.mmi.debug.rc
+vendor/etc/init/hw/init.mmi.diag_mdlog.rc
+vendor/etc/init/hw/init.mmi.overlay.rc
+vendor/etc/init/hw/init.mmi.rc
+vendor/etc/init/hw/init.mmi.tcmd.rc
+vendor/etc/init/hw/init.mmi.usb.rc
+vendor/etc/init/hw/init.qcom.rc
+vendor/etc/init/hw/init.qti.kernel.rc
+vendor/etc/init/hw/init.target.rc
+vendor/etc/init/init.qti.media.rc
+vendor/etc/ueventd.rc
+vendor/etc/fstab.qcom.zram
+vendor/bin/init.class_main.sh
+vendor/bin/init.mmi.boot.sh
+vendor/bin/init.mmi.display.sh
+vendor/bin/init.mmi.laser.sh
+vendor/bin/init.mmi.modules.sh
+vendor/bin/init.mmi.touch.sh
+vendor/bin/init.mmi.usb.sh
+vendor/bin/init.oem.fingerprint2.sh
+vendor/bin/init.oem.hw.sh
+vendor/bin/init.qcom.class_core.sh
+vendor/bin/init.qcom.early_boot.sh
+vendor/bin/init.qcom.post_boot.sh
+vendor/bin/init.qcom.sh
+vendor/bin/init.qti.early_init.sh
+vendor/bin/init.qti.media.sh
+vendor/bin/init.qti.write.sh
+vendor/bin/system_dlkm_modprobe.sh
+vendor/bin/vendor_modprobe.sh
+
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 
@@ -1274,6 +1308,11 @@ vendor/firmware/aw869x_rtp.bin
 vendor/bin/cnss-daemon
 vendor/etc/data/netmgr_config.xml
 vendor/firmware/wigig.ini
+
+# Wi-Fi Configs
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wi-Fi Display
 vendor/bin/wfdhdcphalservice
