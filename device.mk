@@ -252,6 +252,11 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/motorola
 
+# System init
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.rc
+
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
