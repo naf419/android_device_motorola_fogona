@@ -265,10 +265,7 @@ tcpc_sgm7220.ko
 tcpc_aw35616.ko
 rt_pd_manager.ko
 qpnp_adaptive_charge.ko
-moto_mmap_fault.ko
-moto_mm.ko
 zsmalloc.ko
 zram.ko
-moto_swap.ko
 moto_sched.ko
 msm_kgsl.ko

@@ -120,10 +120,7 @@ TARGET_KERNEL_EXT_MODULES := \
     motorola/drivers/power/rt9426a_fg_mmi \
     motorola/drivers/misc/utag \
     motorola/drivers/moto_f_usbnet \
-    motorola/drivers/moto_mm \
-    motorola/drivers/moto_mmap_fault \
     motorola/drivers/moto_sched \
-    motorola/drivers/moto_swap \
     motorola/drivers/misc/aw9610x \
     motorola/drivers/misc/mmi_sys_temp \
     motorola/drivers/misc/ldo_vibrator_mmi \
