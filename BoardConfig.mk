@@ -100,17 +100,29 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/wlan-fogona/platform \
     qcom/opensource/wlan-fogona/qcacld-3.0 \
     nxp/opensource/driver \
+    motorola/drivers/sensors \
     motorola/drivers/input/misc/chipone_fps_mmi_v1 \
     motorola/drivers/input/misc/fpc_fps_mmi \
+    motorola/drivers/input/misc/goodix_fod_mmi \
     motorola/drivers/input/misc/qpnp_power_on_mmi \
     motorola/drivers/input/touchscreen/chipone_tddi_v2_mmi \
     motorola/drivers/input/touchscreen/touchscreen_mmi \
     motorola/drivers/input/touchscreen/ilitek_v3_mmi \
     motorola/drivers/input/touchscreen/nova_0flash_mmi \
-    motorola/drivers/input/misc/goodix_fod_mmi \
     motorola/drivers/mmi_annotate \
     motorola/drivers/mmi_info \
     motorola/drivers/mmi_relay \
+    motorola/drivers/misc/utag \
+    motorola/drivers/misc/aw9610x \
+    motorola/drivers/misc/mmi_sys_temp \
+    motorola/drivers/misc/ldo_vibrator_mmi \
+    motorola/drivers/misc/sx937x_multi \
+    motorola/drivers/misc/sx933x \
+    motorola/drivers/misc/tps61280a \
+    motorola/drivers/moto_f_usbnet \
+    motorola/drivers/moto_sched \
+    motorola/drivers/nfc/st21nfc \
+    motorola/drivers/power/mmi_discrete_charger \
     motorola/drivers/power/bq2589x_chg_mmi \
     motorola/drivers/power/cw2217b_fg_mmi \
     motorola/drivers/power/bm_adsp_ulog \
@@ -118,23 +130,11 @@ TARGET_KERNEL_EXT_MODULES := \
     motorola/drivers/power/qti_glink_charger \
     motorola/drivers/power/qpnp_adaptive_charge \
     motorola/drivers/power/rt9426a_fg_mmi \
-    motorola/drivers/misc/utag \
-    motorola/drivers/moto_f_usbnet \
-    motorola/drivers/moto_sched \
-    motorola/drivers/misc/aw9610x \
-    motorola/drivers/misc/mmi_sys_temp \
-    motorola/drivers/misc/ldo_vibrator_mmi \
-    motorola/drivers/misc/sx937x_multi \
-    motorola/drivers/misc/sx933x \
-    motorola/drivers/misc/tps61280a \
-    motorola/drivers/nfc/st21nfc \
-    motorola/drivers/power/mmi_discrete_charger \
     motorola/drivers/power/mmi_lpd_mitigate \
     motorola/drivers/power/sgm4154x_chg_mmi \
     motorola/drivers/power/sm5602_fg_mmi \
     motorola/drivers/power/wakeup_sources \
     motorola/drivers/regulator/wl2868c \
-    motorola/drivers/sensors \
     motorola/drivers/usb/typec/adapter_class \
     motorola/drivers/usb/typec/mmi_tcpc \
     motorola/drivers/watchdogtest
