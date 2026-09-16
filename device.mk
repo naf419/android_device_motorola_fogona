@@ -258,8 +258,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # System init
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.rc
-
+        $(LOCAL_PATH)/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.rc \
+        $(LOCAL_PATH)/init/init.mmi.overlay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.overlay.rc
 
 # Telephony
 PRODUCT_PACKAGES += \
