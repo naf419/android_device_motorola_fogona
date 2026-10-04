@@ -691,6 +691,8 @@ vendor/etc/init/init.qti.media.rc
 vendor/etc/ueventd.rc
 vendor/etc/fstab.qcom.zram
 vendor/bin/init.class_main.sh
+vendor/bin/init.kernel.post_boot.sh
+vendor/bin/init.kernel.post_boot-bengal.sh
 vendor/bin/init.mmi.boot.sh
 vendor/bin/init.mmi.display.sh
 vendor/bin/init.mmi.laser.sh
