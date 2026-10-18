@@ -1,8 +1,5 @@
 LOCAL_PATH := device/motorola/fogona
 
-#Gapps
-include vendor/gapps/arm64/arm64-vendor.mk
-
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 BOARD_USES_FULL_RECOVERY_IMAGE := true
@@ -89,6 +86,7 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 AB_OTA_UPDATER := true
 PRODUCT_PACKAGES += \
   update_engine \
+  update_engine_sideload \
   update_verifier
 # Debug builds
 PRODUCT_PACKAGES_DEBUG += update_engine_client
