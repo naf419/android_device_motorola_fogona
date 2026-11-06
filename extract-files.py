@@ -77,6 +77,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/seccomp_policy/wfdhdcphalservice.policy'
     ): blob_fixup()
         .add_line_if_missing('gettid: 1'),
+    'vendor/etc/resourcemanager_bengal_idp.xml': blob_fixup()
+        .regex_replace('<speaker_protection_enabled>1<', '<speaker_protection_enabled>0<'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
