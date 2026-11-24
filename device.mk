@@ -65,6 +65,11 @@ PRODUCT_PACKAGES += \
     lib_bt_ble \
     lib_bt_bundle
 
+# Audio - Configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
+    $(LOCAL_PATH)/audio/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml
+
 # Boot Control
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
@@ -106,10 +111,6 @@ AB_OTA_PARTITIONS := \
   vbmeta_system \
   system_dlkm \
   vendor_dlkm
-
-# Audio - Configs
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml
 
 # Camera
 PRODUCT_PACKAGES += \
