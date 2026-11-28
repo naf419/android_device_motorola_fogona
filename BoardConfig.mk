@@ -17,9 +17,41 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a9
 
+# Boot
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_INIT_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME = fogona
 
+# DTB / DTBO
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
+TARGET_NEEDS_DTBOIMAGE := true
+TARGET_MERGE_DTBS_WILDCARD ?= khaje-moto-base-cnss*
+
+
+# Kernel
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_RAMDISK_USE_LZ4 := true
+TARGET_KERNEL_VERSION := 5.15
+TARGET_KERNEL_CONFIG := gki_defconfig vendor/bengal_GKI.config vendor/ext_config/moto-bengal.config vendor/ext_config/moto-bengal-fogona.config
+TARGET_KERNEL_SOURCE := kernel/motorola/sm8550
+BOARD_KERNEL_IMAGE_NAME := Image
+KERNEL_LTO := thin
+BOARD_KERNEL_CMDLINE += printk.devkmsg=on printk.always_kmsg_dump=1 loglevel=7
+BOARD_BOOTCONFIG := 
+    androidboot.hardware=qcom \
+    androidboot.usbcontroller=4e00000.dwc3 \
+    androidboot.memcg=1 \
+    androidboot.load_modules_parallel=true
+BOARD_KERNEL_CMDLINE := \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    firmware_class.path=/vendor/firmware_mnt/image \
+    mem.enable_mglru=1
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
