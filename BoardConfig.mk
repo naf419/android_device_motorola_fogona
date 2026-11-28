@@ -32,6 +32,10 @@ BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_NEEDS_DTBOIMAGE := true
 TARGET_MERGE_DTBS_WILDCARD ?= khaje-moto-base-cnss*
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := \
+    $(DEVICE_PATH)/config.fs \
+    $(DEVICE_PATH)/mot_aids.fs
 
 # Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.recovery
