@@ -111,12 +111,21 @@ PRODUCT_COPY_FILES += \
 # Platform
 PRODUCT_PLATFORM := qcom
 
+# Recovery init script
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# System init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.rc \
+    $(LOCAL_PATH)/init/init.mmi.overlay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.overlay.rc
 
 # VINTF
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
