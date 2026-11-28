@@ -37,6 +37,12 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint \
     vendor_fsg_mountpoint
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
+
 # Platform
 PRODUCT_PLATFORM := qcom
 
@@ -50,6 +56,24 @@ PRODUCT_SOONG_NAMESPACES += \
 # VINTF
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.device.xml
+
+# Wifi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    hostapd \
+    libwifi-hal-qcom \
+    libwifi-hal-ctrl \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
+PRODUCT_PACKAGES += \
+    WifiResCommonOverlay
+
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/fogona/fogona-vendor.mk)
