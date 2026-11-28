@@ -15,6 +15,9 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint \
     vendor_fsg_mountpoint
 
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 33
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
