@@ -127,6 +127,12 @@ PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor \
     libjsoncpp.vendor
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Partitions
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
