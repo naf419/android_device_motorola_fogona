@@ -27,6 +27,71 @@ PRODUCT_PACKAGES += \
     update_verifier
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# Audio
+PRODUCT_PACKAGES += \
+    audioadsprpcd \
+    audio.bluetooth.default \
+    audio.primary.bengal \
+    audio.r_submix.default \
+    audio.usb.default \
+    sound_trigger.primary.bengal \
+    android.hardware.audio.service \
+    vendor.qti.hardware.AGMIPC@1.0-service \
+    vendor.qti.hardware.pal@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@4.0-impl \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.2-impl \
+    android.hardware.soundtrigger@2.3-impl
+
+PRODUCT_PACKAGES += \
+    firmware_aw_cali.bin_symlink
+
+PRODUCT_PACKAGES += \
+    libaudiopreprocessing \
+    libagm \
+    libagmclient \
+    libagm_compress_plugin \
+    libagm_mixer_plugin \
+    libagm_pcm_plugin \
+    libar-pal \
+    libbatterylistener \
+    libbundlewrapper \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libhfp_pal \
+    libfmpal \
+    libldnhncr \
+    libpalclient \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libreverbwrapper \
+    libsndcardparser \
+    libvisualizer \
+    libvolumelistener
+
+PRODUCT_PACKAGES += \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle
+
+# Audio - Configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
+    $(LOCAL_PATH)/audio/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
