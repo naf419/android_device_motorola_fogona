@@ -126,6 +126,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     fastbootd
 
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    qcom.fmradio
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
