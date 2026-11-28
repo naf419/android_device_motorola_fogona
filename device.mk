@@ -37,6 +37,9 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint \
     vendor_fsg_mountpoint
 
+# Platform
+PRODUCT_PLATFORM := qcom
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 33
 
