@@ -140,6 +140,10 @@ TARGET_KERNEL_EXT_MODULES := \
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS := metadata
 
+# ODM
+ODM_MANIFEST_SKUS += b
+ODM_MANIFEST_B_FILES := $(DEVICE_PATH)/sku/manifest_b.xml
+
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
