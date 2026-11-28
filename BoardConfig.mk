@@ -1,9 +1,11 @@
-LOCAL_PATH := device/motorola/fogona
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
 
-TARGET_BOOTLOADER_BOARD_NAME = fogona
-TARGET_BOARD_PLATFORM := bengal
+DEVICE_PATH := device/motorola/fogona
 
-# Identify CPU architecture & ABI
+# Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
@@ -15,70 +17,75 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a9
 
+# Audio
+AUDIO_FEATURE_ENABLED_DLKM := true
+AUDIO_FEATURE_ENABLED_DTS_EAGLE := false
+AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
+AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := false
+AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
+AUDIO_FEATURE_ENABLED_PAL_HIDL := true
+AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
+AUDIO_FEATURE_ENABLED_EC_REF_CAPTURE := true
+BOARD_SUPPORTS_OPENSOURCE_STHAL := true
+TARGET_USES_QCOM_MM_AUDIO := true
+$(call soong_config_set,android_hardware_audio,run_64bit,true)
+
+# Boot
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_INIT_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME = fogona
+
 # DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_NEEDS_DTBOIMAGE := true
 TARGET_MERGE_DTBS_WILDCARD ?= khaje-moto-base-cnss*
 
-# Partitions
-TARGET_COPY_OUT_SYSTEM := system
-BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_PRODUCT := product
-BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_SYSTEM_EXT := system_ext
-BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_VENDOR := vendor
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_SYSTEM_DLKM := system_dlkm
-BOARD_SYSTEM_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
-BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
+# Filesystem
+TARGET_FS_CONFIG_GEN := \
+    $(DEVICE_PATH)/config.fs \
+    $(DEVICE_PATH)/mot_aids.fs
 
-# Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+# Fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.recovery
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
+    $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
-BOARD_BOOT_HEADER_VERSION := 4
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_INIT_BOOT_HEADER_VERSION := 4
-BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
-
-BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
-BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
-BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
-BOARD_DTBOIMG_PARTITION_SIZE := 25165824
-
-BOARD_SUPER_PARTITION_SIZE := 6710886400
-BOARD_SUPER_PARTITION_GROUPS := moto_dynamic_partitions
-BOARD_MOTO_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product system_dlkm vendor_dlkm
-BOARD_MOTO_DYNAMIC_PARTITIONS_SIZE := 6706692096 # BOARD_SUPER_PARTITION_SIZE - 4MB
-
-BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
-
+# Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_USE_LZ4 := true
-
 TARGET_KERNEL_VERSION := 5.15
 TARGET_KERNEL_CONFIG := gki_defconfig vendor/bengal_GKI.config vendor/ext_config/moto-bengal.config vendor/ext_config/moto-bengal-fogona.config
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8550
 BOARD_KERNEL_IMAGE_NAME := Image
 KERNEL_LTO := thin
+BOARD_KERNEL_CMDLINE += printk.devkmsg=on printk.always_kmsg_dump=1 loglevel=7
+BOARD_BOOTCONFIG := 
+    androidboot.hardware=qcom \
+    androidboot.usbcontroller=4e00000.dwc3 \
+    androidboot.memcg=1 \
+    androidboot.load_modules_parallel=true
+BOARD_KERNEL_CMDLINE := \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    firmware_class.path=/vendor/firmware_mnt/image \
+    mem.enable_mglru=1
 
 # Kernel modules
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/motorola/sm8550-modules
-
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
-
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.vendor_boot))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(LOCAL_PATH)/modules.blocklist
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(LOCAL_PATH)/modules.load.recovery))
-BOOT_KERNEL_MODULES := $(strip $(shell cat $(LOCAL_PATH)/modules.load $(LOCAL_PATH)/modules.load.vendor_boot))
-
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.vendor_boot))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
+BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/modules.load $(DEVICE_PATH)/modules.load.vendor_boot))
 TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mmrm-driver \
     qcom/opensource/mm-drivers/hw_fence \
@@ -142,81 +149,62 @@ TARGET_KERNEL_EXT_MODULES := \
     motorola/drivers/usb/typec/mmi_tcpc \
     motorola/drivers/watchdogtest
 
+# Metadata
+BOARD_USES_METADATA_PARTITION := true
+BOARD_ROOT_EXTRA_FOLDERS := metadata
+
+# ODM
+ODM_MANIFEST_SKUS += b
+ODM_MANIFEST_B_FILES := $(DEVICE_PATH)/sku/manifest_b.xml
+
+# Partitions
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
+BOARD_DTBOIMG_PARTITION_SIZE := 25165824
+BOARD_SUPER_PARTITION_SIZE := 6710886400
+BOARD_SUPER_PARTITION_GROUPS := moto_dynamic_partitions
+BOARD_MOTO_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product system_dlkm vendor_dlkm
+BOARD_MOTO_DYNAMIC_PARTITIONS_SIZE := 6706692096 # BOARD_SUPER_PARTITION_SIZE - 4MB
+BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 BOARD_USES_SYSTEM_DLKMIMAGE := true
 BOARD_USES_VENDOR_DLKMIMAGE := true
+TARGET_COPY_OUT_SYSTEM := system
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_PRODUCT := product
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_SYSTEM_DLKM := system_dlkm
+BOARD_SYSTEM_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
+BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
 
-BOARD_BOOTCONFIG += androidboot.memcg=1
-BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
-
-BOARD_KERNEL_CMDLINE := \
-    video=vfb:640x400,bpp=32,memsize=3072000 \
-    firmware_class.path=/vendor/firmware_mnt/image \
-    mem.enable_mglru=1
-
-#Audio
-AUDIO_FEATURE_ENABLED_DLKM := true
-AUDIO_FEATURE_ENABLED_DTS_EAGLE := false
-AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
-AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := false
-AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
-AUDIO_FEATURE_ENABLED_PAL_HIDL := true
-AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
-AUDIO_FEATURE_ENABLED_EC_REF_CAPTURE := true
-BOARD_SUPPORTS_OPENSOURCE_STHAL := true
-TARGET_USES_QCOM_MM_AUDIO := true
-
-$(call soong_config_set,android_hardware_audio,run_64bit,true)
-
-# Filesystem
-TARGET_FS_CONFIG_GEN := \
-    $(LOCAL_PATH)/config.fs \
-    $(LOCAL_PATH)/mot_aids.fs
-
-# Fstab
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/init/fstab.recovery
-
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
-        $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-
-# HIDL
-ODM_MANIFEST_SKUS += b
-ODM_MANIFEST_B_FILES := $(LOCAL_PATH)/sku/manifest_b.xml
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := bengal
 
 # Properties
-TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
+TARGET_VENDOR_PROP := $(DEVICE_PATH)/vendor.prop
+
+# Recovery
+BOARD_USES_FULL_RECOVERY_IMAGE := true
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include hardware/motorola/sepolicy/qti/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/private
-PRODUCT_PUBLIC_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/public
-#BOARD_BOOTCONFIG += androidboot.selinux=permissive
-
-# Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-
-# Init script
-BOARD_BOOTCONFIG += androidboot.hardware=qcom
-
-# USB
-BOARD_BOOTCONFIG += androidboot.usbcontroller=4e00000.dwc3
-
-# Debugging
-BOARD_KERNEL_CMDLINE += printk.devkmsg=on  printk.always_kmsg_dump=1 loglevel=7
-BOARD_BOOTCONFIG += androidboot.init_fatal_reboot_target=recovery
-BOARD_BOOTCONFIG += androidboot.init_fatal_panic=true
-
-# Userdata Partition
-TARGET_USERIMAGES_USE_F2FS := true
-TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-
-# Metadata encryption
-BOARD_USES_METADATA_PARTITION := true
-BOARD_ROOT_EXTRA_FOLDERS := metadata
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -250,14 +238,10 @@ BOARD_AVB_VENDOR_BOOT_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX := 24
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 5
 
-# Use sha256 hash algorithm for system_dlkm partition
 BOARD_AVB_SYSTEM_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
-
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
@@ -265,7 +249,6 @@ BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-#BOARD_WPA_SUPPLICANT_PRIVATE_LIB_EVENT := "ON"
 WIFI_DRIVER_DEFAULT := qca_cld3
 WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
 WIFI_DRIVER_STATE_OFF := "OFF"

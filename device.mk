@@ -1,8 +1,32 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
 LOCAL_PATH := device/motorola/fogona
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-BOARD_USES_FULL_RECOVERY_IMAGE := true
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+    boot \
+    init_boot \
+    vendor_boot \
+    system \
+    vendor \
+    system_ext \
+    product \
+    dtbo \
+    vbmeta \
+    vbmeta_system \
+    system_dlkm \
+    vendor_dlkm
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -57,8 +81,7 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libsndcardparser \
     libvisualizer \
-    libvolumelistener \
-    libdynproc
+    libvolumelistener
 
 PRODUCT_PACKAGES += \
     lib_bt_aptx \
@@ -76,51 +99,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti.recovery \
     bootctl
 
-PRODUCT_PLATFORM := qcom
-
-# VINTF
-## Device manifest (from vendor)
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
-## Device-specific system manifest
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.device.xml
-
-# API levels
-PRODUCT_SHIPPING_API_LEVEL := 33
-
-# A/B
-AB_OTA_UPDATER := true
-PRODUCT_PACKAGES += \
-  update_engine \
-  update_engine_sideload \
-  update_verifier
-# Debug builds
-PRODUCT_PACKAGES_DEBUG += update_engine_client
-
-
-# A/B updatable partitions
-AB_OTA_PARTITIONS := \
-  boot \
-  init_boot \
-  vendor_boot \
-  system \
-  vendor \
-  system_ext \
-  product \
-  dtbo \
-  vbmeta \
-  vbmeta_system \
-  system_dlkm \
-  vendor_dlkm
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti \
-    android.hardware.health-service.qti_recovery
 
 # Display
 PRODUCT_PACKAGES += \
@@ -142,12 +124,17 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # fastbootd
 PRODUCT_PACKAGES += \
-        fastbootd
+    fastbootd
 
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery
 
 # Media
 PRODUCT_PACKAGES += \
@@ -215,6 +202,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# Platform
+PRODUCT_PLATFORM := qcom
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
@@ -241,7 +231,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery init script
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
+    $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -250,6 +240,9 @@ PRODUCT_PACKAGES += \
     libpower.vendor \
     libsensorndkbridge
 
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 33
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
@@ -257,8 +250,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # System init
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.rc \
-        $(LOCAL_PATH)/init/init.mmi.overlay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.overlay.rc
+    $(LOCAL_PATH)/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.rc \
+    $(LOCAL_PATH)/init/init.mmi.overlay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.overlay.rc
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -271,7 +264,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml \
     telephony-ext
-
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
@@ -286,6 +278,10 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
+
+# VINTF
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.device.xml
 
 # Wifi
 PRODUCT_PACKAGES += \
