@@ -47,5 +47,9 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# VINTF
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.device.xml
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/fogona/fogona-vendor.mk)
