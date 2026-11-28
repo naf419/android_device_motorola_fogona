@@ -35,6 +35,9 @@ TARGET_MERGE_DTBS_WILDCARD ?= khaje-moto-base-cnss*
 
 # Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.recovery
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
+    $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
