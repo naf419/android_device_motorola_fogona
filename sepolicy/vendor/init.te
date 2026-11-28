@@ -1,0 +1,7 @@
+allow init sysfs:dir search;
+allow init vendor_sysfs_usb_device:file rw_file_perms;
+
+allow init self:capability sys_module;
+allow init rootfs:system module_load;
+
+allow init pstorefs:dir mounton;

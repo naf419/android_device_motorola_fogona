@@ -1,0 +1,7 @@
+# the stock agmsvc.te hwservice (the sm8450-ish one) conflicts with
+# the sm8550 hwservice_contexts in common, so instead of messing
+# with that, we just let the AGMIPC service run under hal_audio_default.
+#
+# now, the two services under the same context need to be able to
+# talk with one another:
+allow hal_audio_default hal_audio_default:binder { call transfer };
