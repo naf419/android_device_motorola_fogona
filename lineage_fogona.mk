@@ -13,6 +13,8 @@ $(call inherit-product, device/motorola/fogona/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 PRODUCT_NAME := lineage_fogona
 PRODUCT_DEVICE := fogona
